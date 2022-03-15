@@ -23,7 +23,8 @@ public class Main {
 	 * start: 출발지
 	 * mid: 옮기기 위해 이동할 장소
 	 * end: 목적지
-	 * */
+	 * 
+	*/
 	
 	public static void Hanoi(int N, int start, int mid, int end) {
 		// 이동할 원반이 한개일 경우
