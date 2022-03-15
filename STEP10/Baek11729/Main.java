@@ -1,4 +1,4 @@
-package STEP7.Baek11729;
+package STEP10.Baek11729;
 
 import java.util.Scanner;
 
