@@ -24,6 +24,90 @@
 </details>
 
 
+<details>
+<summary> 변하지 않는 상수와 리터럴, 변수의 형 변환 </summary>
+<div markdown="1">
+
+  ## 상수(constant) 선언하기
+  - 상수는 변하지 않는 수
+  - ```final``` 예약어를 사용하여 선언
+  - 상수를 사용하면 변하지 않는 값을 반복하여 사용할 때 의미있는 문자로 인식하기 쉽고 변하더라도 선언한 부분만 변경하면 되므로 여러부분을 수정할 필요가 없다.
+  ```java
+  package ch10;
+  
+  public class ConstantTest{
+    public static void main(String[] args){
+      
+      final int MAX_NUM = 100;
+      final int MIN_NUM;
+      
+      MIN_NUM = 0;
+  
+      System.out.println(MAX_NUM);
+      System.out.println(MIN_NUM);
+    }
+  }
+  ```
+  
+  ## 형변환
+  - 서로 다른 자료형 간에 연산등의 수행을 위해 하나의 자료형으로 통일하는 것
+  - 묵시적 형 변환(explicit type conversion, 자동 현변환)과 명시적 형 변환(implicit tpye conversion, 강제 형변환)이 있음
+  - 바이트 크기가 작은 자료형에서 큰 자료형으로 형 변환은 자동으로 이루어 짐
+  - 덜 정밀한 자료형(정수)에서 더 정밀한 자료형(실수)으로 형 변환은 자동으로 이루어 짐
+  ```java
+  package ch10;
+  
+  public class TypeConversionTest {
+    public static void main(String[] args){
+      
+      double dNum = 1.2;
+      float fNum = 0.9F;
+  
+      int iNum1 = (int)dNum + (int)fNum;
+      int iNum2 = (int)(dNum + fNum);
+  
+      System.out.println(iNum1);
+      System.out.println(iNum2);
+    }
+  }
+  ```
+
+</div>
+</details>
+
+
+<details>
+<summary> 연산자 </summary>
+<div markdown="1">
+
+  ## 대입연산자 (assignment operator)
+  - 변수에 다른 변수나 값을 대입하는 연산자
+  - 이항 연산자 중 우선 순위가 가장 낮은 연산자들
+  - 왼족 변수 = 오른쪽 변수
+  
+  ## 부호 연산자
+  - 단항 연산자
+  - 변수의 부호를 유지하거나 바꿈
+  - 실제 변수의 부호가 변하려면 대입 연산자를 사용해야함
+  
+  ## 산술 연산자
+  - 사칙 연산자
+  
+  | 연산자 | 기능 | 연산 예  |
+  | :--: | -- | -- |
+  | + | 두 항을 더한다. | 1+2  |
+  | - | 앞에 있는 항에서 뒤에 있는 항을 뺀다. | 1-2  |
+  | * | 두 항을 곱한다. | 1*2  |
+  | / | 앞에 있는 항에서 뒤에 있는 항을 나우어 몫을 구한다. | 4/3  |
+  | % | 앞에 있는 항에서 뒤에 있는 항을 나우어 나머지를 구한다. | 4%3  |
+  
+  ## 복합 연산자
+  - 대입 연산자와 다른 연산자가 함께 쓰임
+  
+
+</div>
+</details>
+
 
 <details>
   
