@@ -101,16 +101,177 @@
   | / | 앞에 있는 항에서 뒤에 있는 항을 나우어 몫을 구한다. | 4/3  |
   | % | 앞에 있는 항에서 뒤에 있는 항을 나우어 나머지를 구한다. | 4%3  |
   
-  ## 복합 연산자
-  - 대입 연산자와 다른 연산자가 함께 쓰임
+  ## 논리 연산자
+  - 관계 연산자와 혼합하여 많이 사용됨
+  
+  | 연산자 | 기능 | 연산 예  |
+  | :--: | -- | -- |
+  | && (논리곱) | 두 항이 모두 참인 경우에만 결과 값이 참이다. | booleanval = (5 > 3) && (5 > 2); |
+  | (논리합) | 두 항 중 하나의 항만 참이면 결과 값은 참이다. | booleanval = (5 > 3) || (5 < 2); |
+  | ! (부정) | 단항 연산자이다. 참인 경우는 거짓으로 바꾸고, 거짓인 경우 참으로 바꾼다. | booleanval = !(5 > 3); |
+  
+  ## 조건 연산자
+  - 삼항 연산자
+  - 조건식의 결과가 true인 경우와 거짓은 경우에 따라 다른 결과가 수행됨
+  - if 문을 간단히 표현할 때 사용할 수 있음
+  
+  | 연산자 | 기능 | 연산 예  |
+  | :--: | -- | -- |
+  | 조건식 ? 결과1 : 결과2 | 조건식이 참이면 결과1, 조건식이 거짓이면 결과2가 선택된다. | int num = (5 > 3) ? 10 : 20; |
+  
+  ## 비트 연산자
+  - 대입연산자와 다른 연산자가 함께 쓰임
+  
+  | 연산자 | 기능 | 연산 예  |
+  | :--: | -- | -- |
+  | ~ | 비트의 반전(1의 보수) | a = ~a; |
+  | & | 비트 단위 AND | 1 & 1 1반환 그 외는 0 |
+  | (세로) | 비트 단위 OR | 0|0 0반환 그 외는 1 |
+  | ^ | 비트 단위 XOP | 두개의 비트가 서로 다른 경우에 1을 반환 |
+  | << | 왼쪽 shift | a<<2 변수 a를 2비트 만큼 왼쪽으로 이동 |
+  | << | 오른쪽 shift | a>>2 변수 a를 2비트 만큼 오른쪽으로 이동 |
   
 
 </div>
 </details>
 
-
-<details>
   
+<details>
+<summary> 조건문 </summary>
+<div markdown="1">
+
+  ## if 문 (만약에... 라면)
+  - 주어진 조건에 따라 다른 실행이 이루어 지도록 구현
+  
+  ## switch-case 문
+  - 비교 조건이 특정 값이나 문자열인 경우 사용
+  - break 문을 사용하여 각 조건이 만족되면 switch 블럭을 빠져나오도록 함
+  ```java
+  package ch16;
+  
+  import java.util.Scanner;
+  
+  public class SwitchCaseTest {
+    public static void main(String[] args){
+      
+      Scanner sc = new Scanner(System.in);
+      int month = sc.nextInt();
+  
+      int day;
+      switch(month){
+        case 1, 3, 5, 7, 8, 10, 12 ->
+          day = 31;
+        case 2 ->
+          day = 28;
+        case 4, 6, 9, 11 ->
+          day = 30;
+        default -> {
+          System.out.println("존재하지 않는 달 입니다.");
+          day = -1;
+        }
+      }
+      
+     System.out.println(month + "월은 " + day + "일 입니다.");
+    }
+  }
+  ```
+  
+  ```java
+  package ch16;
+  
+  import java.util.Scanner;
+  
+  public class SwitchCaseTest {
+    public static void main(String[] args){
+      
+      Scanner sc = new Scanner(System.in);
+      int month = sc.nextInt();
+  
+      int day = switch(month){
+        case 1, 3, 5, 7, 8, 10, 12 ->
+          31;
+        case 2 ->
+          28;
+        case 4, 6, 9, 11 ->
+          30;
+        default -> {
+          System.out.println("존재하지 않는 달 입니다.");
+          yield -1;
+        }
+      }
+      
+     System.out.println(month + "월은 " + day + "일 입니다.");
+    }
+  }
+  ```
+
+</div>
+</details>
+  
+  
+  
+<details>
+<summary> 반복문 </summary>
+<div markdown="1">
+  
+  ## while 문
+  - 주어진 조건에 맞는 동안 지정된 수행문을 반복적으로 수행하는 제어문
+  - 조건이 맞지 않으면 반복하던 수행을 멈추게 됨
+  - 조건은 주로 반복 횟수나 값을 비교의 결과에 따라 true, false 판단됨
+  
+  ```java
+  package ch18;
+  
+  import java.util.Scanner;
+  
+  public class WhileTest {
+    public static void main(String[] args){
+      
+      Scanner sc = new Scanner(System.in);
+      int input;
+      int sum = 0;
+  
+      input = sc.nextInt();
+      while(input != 0){
+        sum += input;
+        input = sc.nextInt();
+      }
+  
+      System.out.println(sum);
+    }
+  }
+  ``` 
+  
+  ## do - while 문
+  - while문은 조건을 먼저 체크하고 반복 수행이 된다면, do-while문은 조건에 상관 없이 한번 수행하고 나서 조건을 체크
+  
+  ```java
+  package ch18;
+  
+  import java.util.Scanner;
+  
+  public class WhileTest {
+    public static void main(String[] args){
+      
+      Scanner sc = new Scanner(System.in);
+      int input;
+      int sum = 0;
+  
+      do{
+        input = sc.nextInt();
+        sum += input;
+      }while(input != 0);
+  
+      System.out.println(sum);
+    }
+  }
+  ``` 
+ 
+</div>
+</details>
+  
+  
+<details>
 <summary> 자바 입출력 - bufferedreader, bufferedwriter </summary>
 <div markdown="1">
   
@@ -129,9 +290,6 @@
   ## BufferedReader
   
   ## BufferedWriter
-  
-  
-  
-  
+ 
 </div>
-</detils>
+</details>
