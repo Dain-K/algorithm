@@ -1,3 +1,5 @@
+package STEP12.Baek11650;
+
 import java.util.Scanner;
 import java.util.Arrays;
 

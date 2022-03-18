@@ -1,3 +1,5 @@
+package STEP12.Baek2751;
+
 import java.util.*;
 
 public class Main {
