@@ -486,6 +486,64 @@
   - 클래스에 생성자를 구현하지 않아도 new 키워드와 함께 생성자를 호출할 수 있음
   - 클래스에 생성자가 하나도 없는 경우 컴파일러가 생성자 코드를 넣어줌
   - 매개 변수가 없음. 구현부가 없음
+  
+  ## :book: 여러가지 생성자를 정의하는 생성자 오버로딩 (overloading)
+  ### 💡 생성자 정의하기
+  - 생성자를 구현해서 사용할 수 있음
+  - 클래스에 생성자를 따로 구현하면 기본 생성자 (default constructor)는 제공되지 않음
+  - 생성자를 호출하는 코드에서 여러 생성자 중 필요에 따라 호출해서 사용할 수 있음
+    
+    UserInfo.java
+    ```java
+    public class UserInfo (
+    
+        public String userId;
+        public String userPassWord;
+        public String userName;
+        public String userAddress;
+        public String phoneNumber;
+
+        public UserInfo(){}
+
+        public String UserInfo(Sting userIc, String userPassWord, String userName) { 
+            // 객체가 생성될 때 필요한 정보들을 생성
+            this.userId = userId;
+            this.userPassWord = userPassWord;
+            this.userName = userName;
+        }
+
+        public String showUserInfo() {
+            return "고객님의 아이디는 " + userId + "이고, 등록된 이름은 " + userName + "입니다.";
+        }
+    }
+    ```
+    UserInfoTest.java
+    ```java
+    public class UserInfoTest {
+        public static void main(String[] args) {
+    
+            UserInfo userLee = new UserInfo();
+            userLee.userId = "a12345";
+            userLee.userPassWord = "zxsaqw12345";
+            userLee.userName = "Lee";
+            userLee.phoneNumber = "00012345678";
+            userLee.userAddress = "Seoul, Korea";
+
+            System.out.println(userLee.showUserInfo());
+
+            UserInfo userKim = new UserInfo("b12345, "98760awsk", "Kim"");
+            System.out.println(userKim.showUserInfo());
+        }
+    }
+    ```
+    ## 📖 참조 자료형 변수
+    ### 💡 참조 자료형
+    - 변수의 자료형
+      - 기본 자료형: int, long, float, double 등
+      - 참조 자료형: String, Date, Student 등
+    - 클래스형으로 변수를 선언
+    - 기본 자료형은 사용하는 메모리의 크기가 정해져 있지만, 참조 자료형은 클래스에 따라 다름
+    - 참조 자료형을 사용할 때는 해당 변수에 대해 생성하여야 함(String 클래스는 예외적으로 생성하지 않고 사용할 수 있음)
     
   </div>
 </details>
