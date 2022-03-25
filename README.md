@@ -181,8 +181,7 @@
   }
   ```
   
-  ## 📖 반복문 
-
+  ## 📖 반복문
   ### 💡 while 문
   - 주어진 조건에 맞는 동안 지정된 수행문을 반복적으로 수행하는 제어문
   - 조건이 맞지 않으면 반복하던 수행을 멈추게 됨
@@ -282,7 +281,9 @@
       }
   
     }
+                             
   }
+                             
   ```
 </div>
 </details>
@@ -346,6 +347,7 @@
       return result;
     }
   ```
+    
  ### 💡 함수 예제
  ```java
   package ch03;
@@ -495,6 +497,7 @@
     
     UserInfo.java
     ```java
+    
     public class UserInfo (
     
         public String userId;
@@ -516,9 +519,11 @@
             return "고객님의 아이디는 " + userId + "이고, 등록된 이름은 " + userName + "입니다.";
         }
     }
+    
     ```
     UserInfoTest.java
     ```java
+    
     public class UserInfoTest {
         public static void main(String[] args) {
     
@@ -535,6 +540,7 @@
             System.out.println(userKim.showUserInfo());
         }
     }
+    
     ```
     ## 📖 참조 자료형 변수
     ### 💡 참조 자료형
@@ -578,5 +584,6 @@
   - 가지치기라고도 한다.
   - 모든 가능한 경우의 수 중 특정 조건을 만족하는 경우만을 살펴본다.
   - 그 값이 답이 되는 값인지 판단한다. 그렇지 않으면 그 부분까지 탐색하지 않고 가지치기를 한다.
+  
 </div>
 </details>
