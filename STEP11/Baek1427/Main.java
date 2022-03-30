@@ -1,4 +1,4 @@
-package STEP12.Baek1427;
+package STEP11.Baek1427;
 
 import java.util.Scanner;
 import java.util.Arrays;

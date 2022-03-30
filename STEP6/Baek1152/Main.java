@@ -1,4 +1,4 @@
-package STEP7.Baek1152;
+package STEP6.Baek1152;
 
 import java.util.Scanner;
 
@@ -8,18 +8,17 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
 		int count = 1;
-		for(int i = 0; i < s.length(); i++) {
+		for (int i = 0; i < s.length(); i++) {
 			if (i == 0) {
 				if (s.charAt(i) == ' ')
 					count = 1;
-			}
-			else {
+			} else {
 				if (s.charAt(i) == ' ') {
-					count += 1; 
+					count += 1;
 				}
 			}
-			
-			if(i == s.length()-1) {
+
+			if (i == s.length() - 1) {
 				if (s.charAt(i) == ' ')
 					count -= 1;
 			}
@@ -29,4 +28,3 @@ public class Main {
 	}
 
 }
-
