@@ -16,6 +16,7 @@ public class Main {
 	
 	public static int N; // N*N 체스판
 	public static int[] arr; // 체스판 번호
+	public static int count; // 경우의 수
 	
 	public static void main(String[] args)  {	
 		
@@ -27,7 +28,7 @@ public class Main {
 		sc.close();
 	}
 	
-	public static void dfs(int num, int index) {
+	public static void nqueen(int locate) {
 		
 
 		
