@@ -688,24 +688,31 @@
 <details>
 <summary> 📁 개인공부  </summary>
 <div markdown="1">
-  
+  <br>
+  <details>
+  <summary> 📖 자바 입출력 - bufferedreader, bufferedwriter </summary>
+
   ## 📖 자바 입출력 - bufferedreader, bufferedwriter
-  ### 개념
-  #### 📌버퍼(buffer)
+  ### 💡 개념
+  #### 버퍼(buffer)
   > - 데이터를 한 곳에서 다른 한 곳으로 전송하는 동안 일시적으로 그 데이터를 보관하는 임시 메모리 영역  
   > - 입출력 속도 향상을 위해 버퍼 사용
   > - 속도가 빠르다
-  
-  ### 주요 용어
-  #### 📌버퍼 플러시(buffer flush)
+
+  ### 💡 주요 용어
+  #### 버퍼 플러시(buffer flush)
   ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;버퍼에 남아 있는 데이터를 출력(버퍼를 비우는 동작)
-  #### 📌버퍼를 이용한 입력: `BufferedReader`
-  #### 📌버퍼를 이용한 출력: `BufferedWriter`
-  
+  #### 버퍼를 이용한 입력: `BufferedReader`
+  #### 버퍼를 이용한 출력: `BufferedWriter`
+
   ### BufferedReader
-  
+
   ### BufferedWriter
- 
+  </details>
+
+  <details>
+  <summary> 📖 백트래킹(Baktracking) </summary>
+
   ## 📖 백트래킹(Baktracking)
   - 해를 찾아가는 도중, 진행 중인 지금의 경로가 해가 될 것 같지 않으면 그 경로를 더이상 가지 않고 되돌아가는 것
   - 모든 경우의 수를 전부 고려하는 알고리즘
@@ -714,6 +721,14 @@
   - 가지치기라고도 한다.
   - 모든 가능한 경우의 수 중 특정 조건을 만족하는 경우만을 살펴본다.
   - 그 값이 답이 되는 값인지 판단한다. 그렇지 않으면 그 부분까지 탐색하지 않고 가지치기를 한다.
+    
+  ### 💡 백트래킹 동작 방식
+    1. 백트래킹은 상태공간트리에서 DFS를 실시한다.
+    2. 이때 이 노드가 유망한 노드인지, 즉 해가 될 가능성이 있는 노드인지 확인한다.
+    3. 유망한 노드일 경우 그 자식 노드를 계속 탐색한다.
+    4. 유망하지 않은 노드일 경우 그 자식노드를 탐색하지 않고 중단한다.
+  </details>
+  
   
 </div>
 </details>
