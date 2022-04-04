@@ -27,35 +27,46 @@ public class Main {
 		sc.close();
 	}
 
-	public static void nqueen(int depth) {
+	public static void nqueen(int row) {
 		// depth: 열
 
 		// 행을 다 채운 경우
-		if (depth == N) {
+		if (row == N) {
 			count++;
 			return;
 		}
 
 		for (int i = 0; i < N; i++) {
-			arr[depth] = i;
+			
+			arr[row] = i; // 현재 위치한 노드의 좌표를 배열에 저장
 
-			// 해당 열에 퀸을 놓을 수 있는지 확인
-			if (possible(depth)) {
-				nqueen(depth + 1);
+			// 해당 열에 퀸(Queen)을 놓을 수 있는지 확인(유망한 노드인지 확인)
+			if (isPossible(row)) {
+				// 서브 트리로 이동 (하위 노드로 이동)
+				nqueen(row + 1);
+			}
+			else {
+				// 백트래킹 수행, 해당 노드는 가지 치기가 수행된다.
+				arr[row] = 0;
 			}
 		}
 	}
 
-	/* 퀸을 놓을 수 있는지 확인하는 함수 */
-	public static boolean possible(int col) {
+	/* 퀸(Queen)을 놓을 수 있는지 확인하는 함수(유망한 노드인지 확인하는 함수) */
+	public static boolean isPossible(int col) {
 
 		for (int i = 0; i < col; i++) {
 
-			// 같은 행에 존재하는 경우
-			if (arr[col] == arr[i])
+			// 상위노드에서 같은 행에 퀸(Queen)이 존재하는 경우
+			if (arr[col] == arr[i]) {
 				return false;
+			}
+			
+			// 대각선에 퀸(Queen)이 존재하는지 확인, 상위 노드의 퀸가 현재 노드의 쿤의 가로세로 거리가 같은지 검사
+			else if(Math.abs(arr[col] - arr[i]) == Math.abs(i - col)) {
+				return false;
+			}
 
-			// 추가...
 
 		}
 		return true;
