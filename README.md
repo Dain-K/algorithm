@@ -544,12 +544,142 @@
     ```
 ## 📖 참조 자료형 변수
 ### 💡 참조 자료형
-- 변수의 자료형
-  - 기본 자료형: int, long, float, double 등
-  - 참조 자료형: String, Date, Student 등
-- 클래스형으로 변수를 선언
-- 기본 자료형은 사용하는 메모리의 크기가 정해져 있지만, 참조 자료형은 클래스에 따라 다름
-- 참조 자료형을 사용할 때는 해당 변수에 대해 생성하여야 함(String 클래스는 예외적으로 생성하지 않고 사용할 수 있음)
+  - 변수의 자료형
+    - 기본 자료형: int, long, float, double 등
+    - 참조 자료형: String, Date, Student 등
+  - 클래스형으로 변수를 선언
+  - 기본 자료형은 사용하는 메모리의 크기가 정해져 있지만, 참조 자료형은 클래스에 따라 다름
+  - 참조 자료형을 사용할 때는 해당 변수에 대해 생성하여야 함(String 클래스는 예외적으로 생성하지 않고 사용할 수 있음)
+
+## 📖 접근 제어 지시자(access modifier)와 정보은닉(imformation hiding)
+### 💡 접근 제어 지시자 (access modifier)
+  - 클래외부에서 클래스의 멤버 변수, 메서드, 생성자를 사용할 수 있는지 여부를 지정하는 키워드
+  - `private` : 같은 클래스 내부에서만 접근 가능 (외부클래스, 상속 관계도 패키지가 다르면 접근불가
+  - 아무것도 없음 (default): 같은 패키지 내부에서만 접근 가능 (상속 관계라도 패키지가 다르면 접근 불가)
+  - `protected` : 같은 패키지나 상속 관계의 클래스에서 접근 가능하고 그 외 외부에서는 접근할 수 없음
+  - `public` : 클래스의 외부 어디서나 접근할 수 있음
+    
+### 💡 get() / set() 메서드
+  - private 으로 선언된 멤버 변수 (필드)에 대해 접근, 수정할 수 있는 메서드를 public으로 제공
+  - get() 메서드만 제공되는 경우 read-only 필드
+  - 이클립스에서 자동으로 생성
+
+  ```java
+  public class BirthDay {
+      private int day;
+      private int month;
+      private int year;
+
+      private boolean isValid; // default 값 = false
+
+      public int getDay() {
+          return day;
+      }
+
+      public void setDay(int day) {
+          this.day = day;
+      }
+
+      public int getMonth() {
+          return month;
+      }
+
+      public void setMonth(int month) {
+          if(month < 1 || month > 12) {
+              isValid = false;
+          }
+          else {
+              isValid = true;
+              this.month = month;
+          }
+
+      }
+
+      public int getYear() {
+         return year;
+      }
+
+      public void setYear(int year) {
+         this.year = year;
+      }
+
+      public void showDate() {
+          if(isValid) {
+              System.out.println(year + " " + month + " " + day);
+          }
+          else {
+             System.out.println("유효하지 않는 날짜입니다.");
+          }
+      }
+  }
+  ```  
+    
+  ```java
+  public class BirthDayTest {
+
+      public static void main(String[] args) {
+          BirthDay date = new BirthDay();
+
+          date.setYear(2019);
+          date.setMonth(12);
+          date.setDay(30);
+
+          date.showDate();
+      }
+  }
+  ```
+    
+### 💡 정보은닉
+  - private으로 제어한 멤버 변수도 public 메서드가 제공되면 접근 가능하지만 변수가 public 으로 공개되었을 때보다 pivate 일 때 각 변수에 대한 제한을 public 메서드에서 제어할 수 있다.
+  ```java
+  public void setMonth(int month) {
+      if(month < 1 || month > 12) {
+          isValid = false;
+      }
+      else {
+          isValid = true;
+          this.month = month;
+      }
+
+  }
+  ```
+    
+## 📖 캡슐화
+### 💡 정보 은닉을 활용한 캡슐화
+- 꼭 필요한 정보와 기능만 외부에 오픈함
+- 대부분의 멤버 변수와 메서드를 감추고 외부에 통합된 인터페이스만은 제공하여 일관된 기능을 구현하게 함
+- 각각의 메서드나 멤버변수를 접근함으로써 발생하는 오류를 최소화 한다.
+    
+    ## :book: 객체 자신을 가리키는 this
+    ### 💡 this의 역할
+    - 인스턴스 자신의 메모리를 가리킴
+    - 생성자에서 또 다른 생성자를 호출할 때 사용
+    - 자신의 주소(참조값)을 반환함
+    - 생성된 인스턴스 메모리의 주소를 가짐
+      - 클래스 내에서 참조변수가 가지는 주소 값과 동일한 주소값을 가지는 키워드
+    ### 💡 생성자에서 다른 생성자를 호출하는 this
+    - 클래스에 생성자가 여러개인 경우, this를 이용하여 생성자에서 다른 생성자를 호출할 수 있음
+    - 생성자에서 다른 생성자를 호출하는 경우, 인스턴스의 생성이 완전하지 않은 상태이므로 this() statement 이전에 다른 statement를 쓸 수 없음
+    ```java
+    public class Person{
+    
+        String name;
+        int age;
+    
+        // 아래에 같은 함수가 있으므로 this로 호출하여 초기 설정을 해주는 것이다.
+        public Person() {
+            this("이름없음", 1);  
+            // 이것이 호출되는 순간에는 인스턴스가 아직 생성되지 않은 상태이다.
+   `        // 이것 이전에 코드를 넣게 되면 오류가 나게 된다.
+        }
+    
+        public Person(String name, int age){ // 함수의 호출이 끝나야 인스턴스가 생성되는 것이다
+            this.name = name;
+            this.age = age;
+        }
+    
+    }
+    ```
     
   </div>
 </details>
