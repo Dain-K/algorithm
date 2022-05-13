@@ -743,7 +743,79 @@ public class Person{
 - 프로그램에서 인스턴스가 단 한 개만 생성되어야 하는 경우 사용하는 디자인 패텀
 - static 변수, 메서드를 활용하여 구현 할 수 있음
     
+## 📖 자료를 순차적으로 한꺼번에 관리하는 방법 - 배열(arryay)
+### 💡 배열이란
+- 동일한 자료형의 순차적 자료 구조
+- 인덱스 연산자를 이용하여 빠른 참조가 가능
+- 물리적 위치와 논리적 위치가 동일
+- 배열의 순서는 0부터 시작
+- 자바에서는 객체 배열을 구현한 ArryayList를 많이 활용함
+### 💡 배열 선언과 초기화
+- 배열 선언하기
+```java
+  int[] arr1 = new int[10];
+  int arr2[] =new int[10];
+```
+- 배열 초기화하기
+```java
+  int[] numbers = new int[] {10, 20, 30}; // 개수 생략해야함
 
+  int[] numbers = (10, 20, 30); // new int[] 생략가능
+
+  int[] ids;
+  ids = new int[] {10, 20, 30}; // 선언 후 배열을 생성하는 경우는 new int[] 생략할 수 있음
+```
+### 💡 배열 사용하기
+- 인덱스 연산자 활용 - 배열 요소가 저장된 메모리의 위치를 연산하여 찾아줌
+- 배열을 이용하여 합을 구하기
+```java
+  int[] arr = new int[10];
+  int total = 0;
+
+  for(int i = 0, num = 1; i < arr.length; i++, num++) {
+    arr[i] = num;
+   }
+    for(int num : arr) {
+    total += num;
+  }
+  System.out.println(total);
+```
+
+ ## 📖 객체 배열 사용하기
+ ### 💡 객체 배열 선언과 구현
+ - 기본 자료형 배열은 선언과 동시에 배열의 크기만큼의 메모리가 할당되지만, 객체 배열의 경우엔 요소가 되는 객체의 주소가 들어갈(4바이트, 8바이트)메모리만 할당되고 각 요소 객체는 생성하여 저장함
+ - null로 초기화
+ ### 💡 객체 배열 복사하기
+ - System.arrayCopy(src, srcPos, dest, destPos, length) 자바에서 제공되는 배열 복사 메서드
+                                         
+ ## 📖 객체 배열을 구현한 클래스 ArrayList
+ ### 💡 ArrayList의 주요 메서드
+ <table>
+    <tr>
+     <td>메서드</td>
+     <td>설명</td>
+    </tr>
+     <tr>
+     <td>boolean add(E e)</td>
+     <td>요소 하나를 배열에 추가합니다. E는 요소의 자료형을 의미합니다.</td>
+    </tr>
+     <tr>
+     <td>int size()</td>
+     <td>배열에 추가된 요소 전체 개수를 반환합니다.</td>
+    </tr>
+     <tr>
+     <td>E get(int index)</td>
+     <td>배열의 index 위치에 있는 요소 값을 반환합니다.</td>
+    </tr>
+     <tr>
+     <td>E remeve(int index)</td>
+     <td>배열의 index 위치에 있는 요소 값을 제거하고 그 값을 반환합니다.</td>
+    </tr>
+     <tr>
+     <td>boolean isEmpty()</td>
+     <td>배열이 비어있는지 확인합니다.</td>
+    </tr>
+ </table>
   </div>
 </details>
   
