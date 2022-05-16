@@ -822,6 +822,7 @@ public class Person{
 <details>
 <summary> 📁 ch 03. 객체지향 핵심  </summary>
 <div markdown="1">
+  
 ## 📖 객체간의 상속은 어떤 의미일까
 ### 💡 클래스 상송
 - 새로운 클래스를 정의할 때 이미 구현된 클래스를 상속 받아서 속성이나 기능을 확장하여 클래스를 구현함
