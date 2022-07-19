@@ -939,6 +939,22 @@ class B extends A {
 - 내부적으로 가변적인 char[]를 멤버변수로 가짐
 - 단일 Thread 프로그램에서는 StringBuilder 사용을 권장
 - toString() 메서드로 String 반환
+## 04. class 클래스 사용하기
+### 💡 Class 클래스
+- 자바의 모든 클래스와 인터페이스는 컴파일 후 class 파일이 생성됨
+- Classs 클래스는 컴파일 된 class 파일을 로드하여 객체를 동적 로드하고, 정보를 가져오는 메서드가 제공됨
+- ClassforName("클래스이름") 메서드로 클래스를 동적으로 로드함
+```java
+Class c = Class.forName("java.lang.String");
+```
+- 생성된 인스턴스에서 Class 클래스 가져오기
+```java
+String s = new String();
+Class c = s.getClass();
+```
+### 💡 동적 로딩
+- 컴파일 시에 데이터 타입이 binding 되는 것이 아닌, 실행 중에 데이터 타입을 binding 하는 방법
+- 컴파일 시에 타입이 정해지지 않으므로 동적 로딩 시 오류가 발생하면 프로그램의 심각한 장개가 발생 가능
 </div>
 </details>
 
