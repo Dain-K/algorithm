@@ -909,7 +909,7 @@ class B extends A {
 </details>
 
 <details>
-<summary> :file_folder: ch 04 자바의 유용한 클래스들 </summary>
+<summary> :file_folder: ch 04. 자바의 유용한 클래스들 </summary>
 <div markdown="1">
 
 ## 01. Object 클래스 - 모든 클래스의 최상위 클래스
@@ -955,6 +955,9 @@ Class c = s.getClass();
 ### 💡 동적 로딩
 - 컴파일 시에 데이터 타입이 binding 되는 것이 아닌, 실행 중에 데이터 타입을 binding 하는 방법
 - 컴파일 시에 타입이 정해지지 않으므로 동적 로딩 시 오류가 발생하면 프로그램의 심각한 장개가 발생 가능
+
+### 💡 Class의 newInstance() 메서드로 인스턴스 생성
+new 키워드를 사용하지 않고 클래스 정보를 활용하여 인스턴스 생성
 </div>
 </details>
 
