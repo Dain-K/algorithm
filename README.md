@@ -317,121 +317,216 @@ public class ContinueTest {
   <div markdown="1">
     
  ## 📖 객체와 객체지향 프로그래밍
- ### 💡 객체 (object)
- - 의사나 행위가 미치는 대상 (사전적 의미)
- - 구체적, 추상적 데이터의 단위 (학생, 회원, 생산, 주문, 배송)
- ### 💡 객체 지향 프로그램 구현 방법
- 1. 객체를 정의한다.
- 2. 각 객체가 제공하는 기능들을 구현한다.
- 3. 각 객체가 제공하는 기능들 간의 (메세지 전달)을 통하여 객체간의 협력을 구현한다.
- ## ✏️ 생활 속에서 객체를 찾아 클래스 구현해보기
- ### 💡 클래스는 객체의 청사진이다.
-  - 객체의 속성은 클래스의 멤버 변수(member variable)로 선언한다.
-  - 학생 클래스
-  ```java
-  public class Student {
-      int studentNumber;
-      String studentName;
-      int majorCode;
-      String majorName;
-      int grade;
+
+### 💡 객체 (object)
+
+- 의사나 행위가 미치는 대상 (사전적 의미)
+- 구체적, 추상적 데이터의 단위 (학생, 회원, 생산, 주문, 배송)
+- 물리적으로 존재하거나 추상적으로 생각할 수 잇는 것 중에서 자신의 속성을 가지고 있고 다른 것과 식별 가능한 것을 말한다.
+- 객체는 속성과 동작으로 구성되어있다고 생각하면 되는데, 자바에서는 속성과 동작을 각각 필드(field)와 메소드(method)라고 생각하면 된다.
+
+### 💡 객체 지향 프로그램 구현 방법
+
+1.  객체를 정의한다.
+2.  각 객체가 제공하는 기능들을 구현한다.
+3.  각 객체가 제공하는 기능들 간의 (메세지 전달)을 통하여 객체간의 협력을 구현한다.
+
+## ✏️ 생활 속에서 객체를 찾아 클래스 구현해보기
+
+### 💡 클래스 (Class)
+
+- 유사한 특징을 지닌 객체들의 속성을 묶어 놓은 집합이다.
+- 객체를 만드는 기능을 수행한다.
+
+```java
+public class Student {
+
+}
+```
+
+### 💡 클래스 특징
+
+1. 캡슐화 + 정보은닉 (Encapsulation + Hiding information)
+
+- 캡슐화란 관련있는 데이터와 합수를 하나로 묶는 것을 말한다.
+- 정보은닉은 데이터를 보호하기 위해 클래스 외부에서 오픈하지 않은 것이다. (외부에서 멤버변수에 직접적인 접근이 불가능하게 만든다.)
+
+2. 상속성 (Inheritance)
+
+- 클래스의 멤버변수나 멤버 메소드를 상속해주거나 상속 받게 한다.
+
+3. 다형성 (Polymorphism)
+
+- 클래스이 다양한 모양이나 성질
+- 부포 클래스로부터 상속받은 클래스의 다양한 형태를 제어할 수 있으며 이벤트 처리가 가능하다.
+
+### 💡 클래스의 기본형식
+
+```java
+class 클래스명 {
+  멤버필드 // 데이터 선언, 저장
+  생성자 // 멤버필드 초기화
+  메소드 // 데이터 입력, 연산, 출력
+}
+```
+
+### 💡 클래스는 객체의 청사진이다.
+
+- 객체의 속성은 클래스의 멤버 변수(member variable)로 선언한다.
+- 학생 클래스
+
+```java
+public class Student {
+  // 선언: 변수 만들기
+  int studentNumber;
+  String studentName;
+  int majorCode;
+  String majorName;
+  int grade;
+}
+```
+
+- 주문 클래스
+
+```java
+public class Oreder {
+  int orderId;
+  String buyerId;
+  String sellerId;
+  int productId;
+  String orderDate;
+}
+```
+
+### 💡 main 문에서 객체를 생성하면...
+
+```java
+public class StudentTest {
+  public static void main(String[] args) {
+    Student s = new Student();
+
+    s.studentNumber = 1000;
+    s.majorCode = 100;
+    s.grade = 4;
   }
-  ```
-  - 주문 클래스
-  ```java
-  public class Oreder {
-      int orderId;
-      String buyerId;
-      String sellerId;
-      int productId;
-      String orderDate;
-  }
-  ```
-  ### 💡 객체 지향 프로그램을 구현할 때는
-  - 객체를 정의한다.
-  - 각 객체의 속성을 멤버 변수로 역할을 메서드로 구현한다.
-  - 각 객체간의 협력을 구현한다.
-  ### 💡 클래스 코딩
-  - 클래스는 대문자로 시작하는 것이 좋다.
-  - java 파일 하나에 클래스는 여러 개가 있을 수 있지만, public 클래스는 하나이고, public 클래스와 java 파일의 이름은 동일하다.
-  - cannel notation 방식으로 하는 것이 좋다.
-    
-  ## 📖 함수와 메서드
-  ### 💡 함수 (function)
-  - 하나의 기능을 수행하는 일련의 코드
-  - 구현된 함수는 호출하여 사용하고 호출된 함수는 기능이 끝나면 제어가 반환된다.
-  - 함수로 구현된 하나의 기능은 여러 곳에서 동일한 방식으로 호출되어 사용될 수 있다.
-  ### 💡 함수 정의하기
-  ```java
-    int add(int num1, int num2) { 
-    // 반환값에 대한 데이터 타입: int 함수명()
-    // 반환을 안하는 경우: void 함수명()
-      int result;
-      result = num1 + num2;
-      return result;
+}
+```
+
+#### 생성과정
+
+1. new 연산자가 s 객체에 저장될 메모리 공간 할당
+2. 생성자가 s 객체를 초기화 (위에서는 default 생성자가 동작)
+3. new 연산자가 새로 생성된 객체의 주소 s 변수에 저장
+4. s 를 통해 Student 에 접근 가능
+
+### 💡 클래스 메소드 정의
+
+- 사용이유: 중복되는 코드의 반복적인 사용을 피할 수 있기 때문이다. 또한, 모듈화로 인하여 코드의 가독성이 좋아진다.
+- 메소드를 작성할 때는 되도록 하나의 메소드가 하나의 기능만 수행하도록 작성하는 것이 좋다.
+  <br>
+
+- Student 를 예제로 학년을 변경하는 메소드를 정의 해보았다.
+
+```java
+void changeGrade(int newGrade) {
+  grade = newGrade;
+}
+```
+
+### 💡 객체 지향 프로그램을 구현할 때는
+
+- 객체를 정의한다.
+- 각 객체의 속성을 멤버 변수로 역할을 메서드로 구현한다.
+- 각 객체간의 협력을 구현한다.
+
+### 💡 클래스 코딩
+
+- 클래스는 대문자로 시작하는 것이 좋다.
+- java 파일 하나에 클래스는 여러 개가 있을 수 있지만, public 클래스는 하나이고, public 클래스와 java 파일의 이름은 동일하다.
+- cannel notation 방식으로 하는 것이 좋다.
+
+## 📖 함수와 메서드
+
+### 💡 함수 (function)
+
+- 하나의 기능을 수행하는 일련의 코드
+- 구현된 함수는 호출하여 사용하고 호출된 함수는 기능이 끝나면 제어가 반환된다.
+- 함수로 구현된 하나의 기능은 여러 곳에서 동일한 방식으로 호출되어 사용될 수 있다.
+
+### 💡 함수 정의하기
+
+```java
+int add(int num1, int num2) {
+// 반환값에 대한 데이터 타입: int 함수명()
+// 반환을 안하는 경우: void 함수명()
+  int result;
+  result = num1 + num2;
+  return result;
+}
+```
+
+### 💡 함수 예제
+
+```java
+package ch03;
+  public class FunctionTest {
+      public static int addNaum(int num1, int num2) {
+        int result;
+        result = num1 + num2;
+        return result;
+      }
+
+      public statuc void sayHello(string greeting) {
+        System.out.println(greeting);
+      }
+
+      public statuc int clacSum() {
+        int sum = 0;
+        int i;
+
+        for(i = 0; i <= 100; i++) {
+          sum+=1;
+        }
+
+        return sum;
+      }
+
+    public static void main(String[] args) {
+
+      int n1 = 10;
+      int n2 = 20;
+
+      int total = addNum(n1, n2);
+      System.out.println(total);
+
+      sayHello("안녕하세요");
+
+      total = calcSum();
+      System.out.println(total);
+
     }
-  ```
-    
- ### 💡 함수 예제
- ```java
-  package ch03;
-    public class FunctionTest {
-    
-        public static int addNaum(int num1, int num2) {
+}
 
-          int result;
-          result = num1 + num2;
-          return result;
+```
 
-        }
-
-        public statuc void sayHello(string greeting) {
-
-          System.out.println(greeting);
-
-        }
-
-        public statuc int clacSum() {
-          int sum = 0;
-          int i;
-
-          for(i = 0; i <= 100; i++) {
-            sum+=1;
-          }
-
-          return sum;
-        }
-
-         public static void main(String[] args) {
-
-           int n1 = 10;
-           int n2 = 20;
-
-           int total = addNum(n1, n2);
-           System.out.println(total);
-
-           sayHello("안녕하세요");
-
-           total = calcSum();
-           System.out.println(total);
-
-         }
-     }
-
-````
 ### 💡 함수 호출과 스택 메모리
+
 - 스택: 함수가 호출될 때 지역 변수들이 사용하는 메모리
 - 함수의 수행이 끝나면 자동으로 반환되는 메모리
 
 ### 💡 메서드 (method)
+
 - 객체의 기능을 구현하기 위해 클래스 내부에 구현되는 함수
 - 멤버 함수(member function)이라고 함
 - 메서드를 구현함으로써 객체의 기능이 구현됨
 - 메서드의 이름은 그 객체를 사용하는 객체(클라이언트)에 맞게 짓는 것이 좋음
 
 ## 📖 멤버변수, 메서드 구현
+
 ### 💡 학생 클래스를 정의하고 이를 사용해보자
+
 - 학생 클래스의 속성을 멤버 변수로 선언하고 메서드를 구현
+
 ```java
    public class Student {
 
@@ -470,7 +565,7 @@ public class ContinueTest {
     }
 
 
-````
+```
 
 ## 📖 인스턴스 생성과 힙 메모리
 
@@ -918,15 +1013,19 @@ class B extends A {
 }
 
 ````
-    extends 키워드 뒤에는 단 하나의 클래스만 올 수 있다, 자바는 단일 상속만을 지원한다.
+
+extends 키워드 뒤에는 단 하나의 클래스만 올 수 있다, 자바는 단일 상속만을 지원한다.
+
 ### 💡 상속을 구현하는 경우
-- 상위 클래슨 ㄴ하위 클래스 보다 더 일반적인 개념과 기능을 가짐
+- 상위 클래스는 하위 클래스 보다 더 일반적인 개념과 기능을 가짐
 - 하위 클래스는 상위 클래스 보다 더 구체적인 개념과 기능을 가짐
 - 하위 클래스가 상위 클래스의 속성과 기능을 확장한다는 의미
+
 ## 📖 메서드 재정의하기(overriding)
 ### 💡 하위 클래스에서 메서드 재정의 하기
 - 오버라이딩: 상위 클래스에 정의된 메서드의 구현 내용이 하위 클래스에서 구현할 내용과 맞지 않는 경우 하위 클래스에서 동일한 이름의 메서드를 재정의 할 수 있음
 - 재정의하여 구현해야함
+
 ```java
   @Override
   public int calcPrice(int price) {
