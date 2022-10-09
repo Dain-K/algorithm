@@ -1012,7 +1012,7 @@ class B extends A {
 
 }
 
-````
+```
 
 extends 키워드 뒤에는 단 하나의 클래스만 올 수 있다, 자바는 단일 상속만을 지원한다.
 
@@ -1031,7 +1031,7 @@ extends 키워드 뒤에는 단 하나의 클래스만 올 수 있다, 자바는
   public int calcPrice(int price) {
   bonusPoint += price * bonusRatio;
   return price - (int price * salesRatio);
-````
+```
 
 ### 💡 @overriding 애노테이션
 
