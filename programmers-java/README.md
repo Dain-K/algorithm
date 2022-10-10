@@ -1,3 +1,9 @@
+# Programmers java study
+
+<details>
+<summary> :pencil: 문자길이 구하기  </summary>
+<div markdown="1">
+
 ## int 자리수 구하기
 
 ```java
@@ -15,6 +21,13 @@ String s = "abcde";
 System.out.println("length: " + s.length());
 ```
 
+</div>
+<details>
+
+<details>
+<summary> :pencil: 조건문 축약 사용  </summary>
+<div markdown="1">
+
 ## 조건문 사용하기
 
 ```java
@@ -31,3 +44,6 @@ public class EvenOrOdd {
     }
 }
 ```
+
+</div>
+<details>
