@@ -5,10 +5,10 @@ class Solution {
         int cnt_y = 0;
 
         for(int i = 0; i < s.length(); i++) {
-            if(s.charAt(i) == 'p'){
+            if(s.charAt(i) == 'p' || s.charAt(i) == 'P'){
                 cnt_p++;
             }
-            else if(s.charAt(i) == 'y') {
+            else if(s.charAt(i) == 'y' || s.charAt(i) == 'Y') {
                 cnt_y++;
             }
         }
