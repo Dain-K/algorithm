@@ -116,6 +116,70 @@ class Solution {
 </details>
 
 <details>
+<summary> :pencil: String charAt()) 메소드  </summary>
+<div markdown="1">
+
+## charAt()
+
+문자열에서 특정 위치의 문자가 무엇인지 확인하는 메소드
+
+```java
+public class GetNumerValueEx {
+
+    public static void main(String[] args) {
+        String s = "Hello java";
+
+        char ca = s.charAt(0);
+        char cb = s.charAt(1);
+        char cc = s.charAt(2);
+
+        System.out.println("첫번째 문자: "+ ca);
+        System.out.println("두번째 문자: "+ cb);
+        System.out.println("세번째 문자: "+ cc);
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String toUpperCase() 메소드  </summary>
+<div markdown="1">
+
+## toUpperCase()
+
+대상 문자열을 모두 대문자로 변환
+
+```java
+String str1 = "hello java"
+
+System.out.println(str1.toUpperCase());
+// 출력: HELLO JAVA
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String toLowerCase() 메소드  </summary>
+<div markdown="1">
+
+## toLowerCase()
+
+대상 문자열을 모두 소문자로 변환
+
+```java
+String str1 = "HELLO JAVA"
+
+System.out.println(str1.toLowerCase());
+// 출력: hello java
+```
+
+</div>
+</details>
+
+<details>
 <summary> :pencil: getNumericValue() 메소드  </summary>
 <div markdown="1">
 
