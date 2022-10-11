@@ -116,7 +116,7 @@ class Solution {
 </details>
 
 <details>
-<summary> :pencil: String charAt()) 메소드  </summary>
+<summary> :pencil: String charAt() 메소드  </summary>
 <div markdown="1">
 
 ## charAt()
@@ -174,6 +174,24 @@ String str1 = "HELLO JAVA"
 
 System.out.println(str1.toLowerCase());
 // 출력: hello java
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String trim() 메소드  </summary>
+<div markdown="1">
+
+## tring()
+
+대상 문자열의 앞 뒤 공백 문자를 모두 제거하여 리턴해준다.
+
+```java
+String str1 = "   공백 제거   ";
+
+System.out.println(str1.trim());
+// 출력: 공백 제거
 ```
 
 </div>
