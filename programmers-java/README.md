@@ -22,7 +22,7 @@ System.out.println("length: " + s.length());
 ```
 
 </div>
-<details>
+</details>
 
 <details>
 <summary> :pencil: 조건문 축약 사용  </summary>
@@ -46,7 +46,7 @@ public class EvenOrOdd {
 ```
 
 </div>
-<details>
+</details>
 
 <details>
 <summary> :pencil: String  </summary>
@@ -113,7 +113,7 @@ class Solution {
 ```
 
 </div>
-<details>
+</details>
 
 <details>
 <summary> :pencil: getNumericValue() 메소드  </summary>
@@ -141,4 +141,4 @@ public class GetNumerValueEx {
 ```
 
 </div>
-<details>
+</details>
