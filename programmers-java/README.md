@@ -198,6 +198,16 @@ System.out.println(str1.trim());
 </details>
 
 <details>
+<summary> :pencil: String equals() 메소드  </summary>
+<div markdown="1">
+
+## equals()
+
+- 두개의 문자열이 동일한지 비교한다.
+</div>
+</details>
+
+<details>
 <summary> :pencil: getNumericValue() 메소드  </summary>
 <div markdown="1">
 
@@ -310,6 +320,38 @@ public class ContainsTest {
         Arrays.asList("gif", "png", "jpg", "bmp").contains("bat"); // false
     }
 }
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: ArrayList.indexOf()  </summary>
+<div markdown="1">
+
+## ArrayList.indexOf()
+
+- indexof(object o)는 인자로 객체를 받는다.
+- 리스트의 안쪽부터 인자와 동일한 객체가 있는지 찾는다.
+- 존재하면 그 인덱스를 리턴한다.
+- 존재하지 않는다면 -1 리턴한다.
+
+### example :one:
+
+```java
+String[] fruitsArr = {"apple", "banana", "apple", "mango"};
+ArrayList<String> fruits = new ArrayList<>(Arrays.asList(fruitsArray));
+System.out.println("indexOF(apple): " + fruits.indexOf("apple")); // 0
+System.out.println("indexOF(kiwi): " + fruits.indexOf("kiwi")); // -1
+```
+
+### example :two:
+
+```java
+int[] arr = {1,8,5,69,75,15,10};
+
+int cellsIndex = Arrays.asList(arr).indexOf(75);
+System.out.println("searched index " + cellsIndex); // 0
 ```
 
 </div>
