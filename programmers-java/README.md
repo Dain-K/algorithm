@@ -224,3 +224,50 @@ public class GetNumerValueEx {
 
 </div>
 </details>
+
+<details>
+<summary> :pencil: Arrays.sort()  </summary>
+<div markdown="1">
+
+## Arrays.sort()
+
+- java.util.Arrays 클래스
+- 정렬 메소드
+- Arrays 클래스는 배열의 복사, 항목 정렬, 검색과 같은 배열 조작 기능을 가지고 있음
+
+### :one: 오름차순 정렬
+
+```java
+import java.util.Arrays;
+
+public class Sort {
+    public static void main(String[] args) {
+        int arr[] = {9, 8, 47, 6, 15, 0, 90};
+        Arrays.sort(arr);
+
+        for(int i: arr) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+### :two: 내림차순 정렬
+
+```java
+import java.util.Arrays;
+
+public class Sort {
+    public static void main(String[] args) {
+        int arr[] = {9, 8, 47, 6, 15, 0, 90};
+        Arrays.sort(arr, Collections.reverseOrder());
+
+        for(int i: arr) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+</div>
+</details>
