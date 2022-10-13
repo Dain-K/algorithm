@@ -269,5 +269,24 @@ public class Sort {
 }
 ```
 
+### :three: 부분 정렬
+
+시작 index, 끝 index를 넣어 일부분만 정렬할 수 있다.
+
+```java
+import java.util.Arrays;
+
+public class Sort {
+    public static void main(String[] args) {
+        int arr[] = {9, 8, 47, 6, 15, 0, 90};
+        Arrays.sort(arr, 0, 4);
+
+        for(int i: arr) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
 </div>
 </details>
