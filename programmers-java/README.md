@@ -290,3 +290,27 @@ public class Sort {
 
 </div>
 </details>
+
+<details>
+<summary> :pencil: string Arrays.asList().contains()  </summary>
+<div markdown="1">
+
+## Arrays.asList(yourArray).contains(yourValue)
+
+스트링 배열에서특정 문자열이 포함되어있는지 확인하기
+
+```java
+import java.util.Arrays;
+
+public class ContainsTest {
+
+    public static void main(String[] args) {
+        Arrays.asList("gif", "png", "jpg", "bmp").contains("exe"); // false
+        Arrays.asList("gif", "png", "jpg", "bmp").contains("png"); // true
+        Arrays.asList("gif", "png", "jpg", "bmp").contains("bat"); // false
+    }
+}
+```
+
+</div>
+</details>
