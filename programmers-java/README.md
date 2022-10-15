@@ -48,7 +48,7 @@ public class EvenOrOdd {
 </div>
 </details>
 
-## 형변환
+### :pushpin: 형변환
 
 <details>
 <summary> :pencil: String to int  </summary>
@@ -194,7 +194,7 @@ for(int i=0 ; i<cArr.length ; i++)
 </div>
 </details>
 
-## String
+### :pushpin: String
 
 <details>
 <summary> :pencil: String  </summary>
@@ -292,7 +292,7 @@ public class GetNumerValueEx {
 </details>
 
 <details>
-<summary> :pencil: String toUpperCase() 메소드  </summary>
+<summary> :pencil: String toUpperCase() - 문자열 모두 대문자  </summary>
 <div markdown="1">
 
 ## toUpperCase()
@@ -310,7 +310,7 @@ System.out.println(str1.toUpperCase());
 </details>
 
 <details>
-<summary> :pencil: String toLowerCase() 메소드  </summary>
+<summary> :pencil: String toLowerCase() - 문자열 모두 소문자  </summary>
 <div markdown="1">
 
 ## toLowerCase()
@@ -328,10 +328,10 @@ System.out.println(str1.toLowerCase());
 </details>
 
 <details>
-<summary> :pencil: String trim() 메소드  </summary>
+<summary> :pencil: String trim() - 앞 뒤 공백 제거  </summary>
 <div markdown="1">
 
-## tring()
+## trim()
 
 대상 문자열의 앞 뒤 공백 문자를 모두 제거하여 리턴해준다.
 
@@ -346,7 +346,7 @@ System.out.println(str1.trim());
 </details>
 
 <details>
-<summary> :pencil: String equals() 메소드  </summary>
+<summary> :pencil: String equals() - 문자 동일한지 비교  </summary>
 <div markdown="1">
 
 ## equals()
@@ -355,71 +355,8 @@ System.out.println(str1.trim());
 </div>
 </details>
 
-## 문자열의 특정 인덱스 값 치환 방법
 
-<details>
-<summary> :pencil: String substring() - 문자열의 특정 인덱스 값 치환  </summary>
-<div markdown="1">
-
-## substring()
-
-- String.substring(int, int)
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: String StringBuilder setCharAt() - 문자열의 특정 인덱스 값 치환  </summary>
-<div markdown="1">
-
-## setCharAt()
-
-- 문자열의 특정 인덱스에 있는 문자를 효율적으로 교체
-
-```java
-class Solution {
-    public String solution(String phone_number) {
-        String answer = "";
-        int length = phone_number.length();
-        StringBuilder sb = new StringBuilder(phone_number);
-
-        for(int i = 0; i < length - 4; i++){
-            sb.setCharAt(i, '*');
-        }
-        answer = sb.toString();
-        return answer;
-    }
-}
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: Char toCharArray() - 문자열의 특정 인덱스 값 치환  </summary>
-<div markdown="1">
-
-```java
-class Main {
-    public static void main(String[] args) {
-        String str = "Hello World";
-        char ch = "_";
-        int pos = 5;
-
-        // 주어진 문자열을 문자 array 로 치환
-        char[] chars = str.toCharArray();
-
-        // char array의 지정된 위치에 있는 문자 교체
-        chars[pos] = ch;
-
-        // 문자 array을 다시 문자열로 치환
-        str = String.valueOf(chars);
-    }
-}
-```
-
-</div>
-</details>
+### :pushpin: char
 
 <details>
 <summary> :pencil: char getNumericValue()  </summary>
@@ -449,8 +386,9 @@ public class GetNumerValueEx {
 </div>
 </details>
 
+### :pushpin: Arrays
 <details>
-<summary> :pencil: Arrays.sort()  </summary>
+<summary> :pencil: Arrays.sort() - 정렬 </summary>
 <div markdown="1">
 
 ## Arrays.sort()
@@ -516,12 +454,12 @@ public class Sort {
 </details>
 
 <details>
-<summary> :pencil: string Arrays.asList().contains()  </summary>
+<summary> :pencil: string Arrays.asList().contains() - 배열에 특정 문자 포함되어있는지  </summary>
 <div markdown="1">
 
 ## Arrays.asList(yourArray).contains(yourValue)
 
-스트링 배열에서특정 문자열이 포함되어있는지 확인하기
+스트링 배열에서 특정 문자열이 포함되어있는지 확인하기
 
 ```java
 import java.util.Arrays;
@@ -539,8 +477,103 @@ public class ContainsTest {
 </div>
 </details>
 
+### :pushpin: List
+
 <details>
-<summary> :pencil: ArrayList.indexOf()  </summary>
+<summary> :pencil: List 와 ArrayList  </summary>
+<div markdown="1">
+
+## List 와 ArrayList
+- `List` = Interface
+- `ArrayList` = Class  <br/>
+> List 와 ArrayList의 가장 큰 차이는 크기가 정해져 있지 않고 동적으로 변한다. <br/>
+> 예를 들어, 배열의 크기가 5라면 5개 이상의 값을 담을 수 없지만 list는 크기가 정해져있지 않아 원하는 만큼 값을 담을 수 있다. <br/>
+> List 에는 ArrayList, Vector, LinkedList 등의 인터페이스를 구현한 자료형이 있다.  <br/>
+> 즉, List 인터페이스 안에 ArrayList 클래스가 포함되어 있다.
+
+```java
+List<자료형> list = new ArraryList<>();
+ArrayList<자료형> list = new ArrayList<>();
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: ArrayList add() - 인덱스 추가  </summary>
+<div markdown="1">
+
+## add()
+```java
+// List<String> pitches = new ArrayList<>();
+ArrayList pitches = new ArrayList();
+
+// 삽입할 위치 지정
+pitches.add(0, "123"); 
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: ArrayList get() - 특정 인덱스의 값을 추출  </summary>
+<div markdown="1">
+
+## get()
+```java
+System.out.println(pitches.get(1));
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: ArrayList size() -  ArrayList의 갯수를 리턴  </summary>
+<div markdown="1">
+
+## size()
+```java
+System.out.println(pitches.size());
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: ArrayList contains() -  리스트 안에 항목이 있는지 판별  </summary>
+<div markdown="1">
+
+## contains()
+```java
+System.out.println(pitches.contains("123"));
+// 포함된 값일 경우 true 반환
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: ArrayList remove() -  리스트 객체에 해당되는 항목을 삭제  </summary>
+<div markdown="1">
+
+## contains()
+- 객체
+```java
+System.out.println(pitches.remove("123"));
+// 삭제한 결과 true, false 를 리턴
+```
+- 인덱스
+```java
+System.out.println(pitches.remove(0));
+// 삭제한 결과 삭제한 항목을 리턴
+```
+
+</div>
+</details>
+
+
+<details>
+<summary> :pencil: ArrayList indexOf() - 리스트에 동일한 객체가 있는지 검색  </summary>
 <div markdown="1">
 
 ## ArrayList.indexOf()
@@ -566,6 +599,73 @@ int[] arr = {1,8,5,69,75,15,10};
 
 int cellsIndex = Arrays.asList(arr).indexOf(75);
 System.out.println("searched index " + cellsIndex); // 0
+```
+
+</div>
+</details>
+
+
+### :pushpin: 문자열의 특정 인덱스 값 치환 방법
+
+<details>
+<summary> :pencil: String substring() - 문자열의 특정 인덱스 값 치환  </summary>
+<div markdown="1">
+
+## substring()
+
+- String.substring(int, int)
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String StringBuilder setCharAt() - 문자열의 특정 인덱스 값 치환  </summary>
+<div markdown="1">
+
+## setCharAt()
+
+- 문자열의 특정 인덱스에 있는 문자를 효율적으로 교체
+
+```java
+class Solution {
+    public String solution(String phone_number) {
+        String answer = "";
+        int length = phone_number.length();
+        StringBuilder sb = new StringBuilder(phone_number);
+
+        for(int i = 0; i < length - 4; i++){
+            sb.setCharAt(i, '*');
+        }
+        answer = sb.toString();
+        return answer;
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: char toCharArray() - 문자열의 특정 인덱스 값 치환  </summary>
+<div markdown="1">
+
+```java
+class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        char ch = "_";
+        int pos = 5;
+
+        // 주어진 문자열을 문자 array 로 치환
+        char[] chars = str.toCharArray();
+
+        // char array의 지정된 위치에 있는 문자 교체
+        chars[pos] = ch;
+
+        // 문자 array을 다시 문자열로 치환
+        str = String.valueOf(chars);
+    }
+}
 ```
 
 </div>
