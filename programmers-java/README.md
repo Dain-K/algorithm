@@ -48,6 +48,152 @@ public class EvenOrOdd {
 </div>
 </details>
 
+## 형변환
+
+<details>
+<summary> :pencil: String to int  </summary>
+<div markdown="1">
+
+## String to int
+
+### Integer.parseInt
+
+```java
+String a = "10";
+int num = Integer.parseInt(a);
+```
+
+### Integer.valueOf
+
+```java
+String str = "10";
+int num = Integer.valueOf(str);
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: Int to String  </summary>
+<div markdown="1">
+
+## Int to String
+
+### String.valueOf
+
+```java
+int num = 10;
+String str = String.valueOf(num);
+```
+
+### String.toString
+
+```java
+int num = 10;
+String str = String.toString(num);
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: Char to Int </summary>
+<div markdown="1">
+
+## Char to Int
+
+### Character.getNumericValue
+
+```java
+char c = '9';
+int num1 = Character.getNumericValue(c);
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: Int to Char </summary>
+<div markdown="1">
+
+## Int to Char
+
+### (char)
+
+```java
+int num = 5;
+char c = (char) num;
+```
+
+### Integer.toString().charAt()
+
+Stirng으로 변환한 다음 char로 변환
+
+```java
+int num = 5;
+char c = Integer.toString(num).charAt(0);
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: Char to String </summary>
+<div markdown="1">
+
+## Char to String
+
+### String.valueOF()
+
+```java
+char[] cArr = {'김', '다', '인'};
+String str = String.valueOf(cArr);
+
+System.out.println(str);
+```
+
+### String 클래스 생성자 이용
+
+- new String(char 배열, 시작 index, 끝 index)
+
+```java
+char[] cArr = {'김', '다', '인'};
+String str = new String(cArr, 1, 2);
+
+System.out.print(str);
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String to Char  </summary>
+<div markdown="1">
+
+## String to Char
+
+### charAt
+
+```java
+String str = "HOJUN";
+char c = str.charAt(0);
+System.out.print("출력 : " + c);
+```
+
+### toCharArray
+
+```java
+String str = "HOJUN";
+char [] cArr = str.toCharArray();
+for(int i=0 ; i<cArr.length ; i++)
+{
+	System.out.print(cArr[i] + " ");	// H O J U N
+}
+```
+
+</div>
+</details>
+
 <details>
 <summary> :pencil: String  </summary>
 <div markdown="1">
@@ -116,7 +262,7 @@ class Solution {
 </details>
 
 <details>
-<summary> :pencil: String charAt() 메소드  </summary>
+<summary> :pencil: String charAt() 메소드 - 특정 위치의 문자 확인  </summary>
 <div markdown="1">
 
 ## charAt()
@@ -210,7 +356,7 @@ System.out.println(str1.trim());
 ## 문자열의 특정 인덱스 값 치환 방법
 
 <details>
-<summary> :pencil: String substring 메소드  </summary>
+<summary> :pencil: String substring() - 문자열의 특정 인덱스 값 치환  </summary>
 <div markdown="1">
 
 ## substring()
@@ -221,7 +367,7 @@ System.out.println(str1.trim());
 </details>
 
 <details>
-<summary> :pencil: String StringBuilder setCharAt() 메소드  </summary>
+<summary> :pencil: String StringBuilder setCharAt() - 문자열의 특정 인덱스 값 치환  </summary>
 <div markdown="1">
 
 ## setCharAt()
@@ -248,7 +394,7 @@ class Solution {
 </details>
 
 <details>
-<summary> :pencil: Char toCharArray() 메소드  </summary>
+<summary> :pencil: Char toCharArray() - 문자열의 특정 인덱스 값 치환  </summary>
 <div markdown="1">
 
 ```java
@@ -274,7 +420,7 @@ class Main {
 </details>
 
 <details>
-<summary> :pencil: getNumericValue() 메소드  </summary>
+<summary> :pencil: char getNumericValue()  </summary>
 <div markdown="1">
 
 ## getNumericValue()
