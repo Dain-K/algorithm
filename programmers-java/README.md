@@ -175,7 +175,7 @@ System.out.print(str);
 ### charAt
 
 ```java
-String str = "HOJUN";
+String str = "DAIN";
 char c = str.charAt(0);
 System.out.print("출력 : " + c);
 ```
@@ -183,16 +183,18 @@ System.out.print("출력 : " + c);
 ### toCharArray
 
 ```java
-String str = "HOJUN";
+String str = "DAIN";
 char [] cArr = str.toCharArray();
 for(int i=0 ; i<cArr.length ; i++)
 {
-	System.out.print(cArr[i] + " ");	// H O J U N
+	System.out.print(cArr[i] + " ");
 }
 ```
 
 </div>
 </details>
+
+## String
 
 <details>
 <summary> :pencil: String  </summary>
