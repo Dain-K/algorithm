@@ -207,6 +207,72 @@ System.out.println(str1.trim());
 </div>
 </details>
 
+## 문자열의 특정 인덱스 값 치환 방법
+
+<details>
+<summary> :pencil: String substring 메소드  </summary>
+<div markdown="1">
+
+## substring()
+
+- String.substring(int, int)
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String StringBuilder setCharAt() 메소드  </summary>
+<div markdown="1">
+
+## setCharAt()
+
+- 문자열의 특정 인덱스에 있는 문자를 효율적으로 교체
+
+```java
+class Solution {
+    public String solution(String phone_number) {
+        String answer = "";
+        int length = phone_number.length();
+        StringBuilder sb = new StringBuilder(phone_number);
+
+        for(int i = 0; i < length - 4; i++){
+            sb.setCharAt(i, '*');
+        }
+        answer = sb.toString();
+        return answer;
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: Char toCharArray() 메소드  </summary>
+<div markdown="1">
+
+```java
+class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        char ch = "_";
+        int pos = 5;
+
+        // 주어진 문자열을 문자 array 로 치환
+        char[] chars = str.toCharArray();
+
+        // char array의 지정된 위치에 있는 문자 교체
+        chars[pos] = ch;
+
+        // 문자 array을 다시 문자열로 치환
+        str = String.valueOf(chars);
+    }
+}
+```
+
+</div>
+</details>
+
 <details>
 <summary> :pencil: getNumericValue() 메소드  </summary>
 <div markdown="1">
