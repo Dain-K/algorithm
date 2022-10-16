@@ -355,6 +355,16 @@ System.out.println(str1.trim());
 </div>
 </details>
 
+<details>
+<summary> :pencil: String substring() -   </summary>
+<div markdown="1">
+
+## substring()
+
+-
+
+</div>
+</details>
 
 ### :pushpin: char
 
@@ -387,6 +397,7 @@ public class GetNumerValueEx {
 </details>
 
 ### :pushpin: Arrays
+
 <details>
 <summary> :pencil: Arrays.sort() - 정렬 </summary>
 <div markdown="1">
@@ -484,12 +495,13 @@ public class ContainsTest {
 <div markdown="1">
 
 ## List 와 ArrayList
+
 - `List` = Interface
-- `ArrayList` = Class  <br/>
-> List 와 ArrayList의 가장 큰 차이는 크기가 정해져 있지 않고 동적으로 변한다. <br/>
-> 예를 들어, 배열의 크기가 5라면 5개 이상의 값을 담을 수 없지만 list는 크기가 정해져있지 않아 원하는 만큼 값을 담을 수 있다. <br/>
-> List 에는 ArrayList, Vector, LinkedList 등의 인터페이스를 구현한 자료형이 있다.  <br/>
-> 즉, List 인터페이스 안에 ArrayList 클래스가 포함되어 있다.
+- `ArrayList` = Class <br/>
+  > List 와 ArrayList의 가장 큰 차이는 크기가 정해져 있지 않고 동적으로 변한다. <br/>
+  > 예를 들어, 배열의 크기가 5라면 5개 이상의 값을 담을 수 없지만 list는 크기가 정해져있지 않아 원하는 만큼 값을 담을 수 있다. <br/>
+  > List 에는 ArrayList, Vector, LinkedList 등의 인터페이스를 구현한 자료형이 있다. <br/>
+  > 즉, List 인터페이스 안에 ArrayList 클래스가 포함되어 있다.
 
 ```java
 List<자료형> list = new ArraryList<>();
@@ -504,12 +516,13 @@ ArrayList<자료형> list = new ArrayList<>();
 <div markdown="1">
 
 ## add()
+
 ```java
 // List<String> pitches = new ArrayList<>();
 ArrayList pitches = new ArrayList();
 
 // 삽입할 위치 지정
-pitches.add(0, "123"); 
+pitches.add(0, "123");
 ```
 
 </div>
@@ -520,6 +533,7 @@ pitches.add(0, "123");
 <div markdown="1">
 
 ## get()
+
 ```java
 System.out.println(pitches.get(1));
 ```
@@ -532,6 +546,7 @@ System.out.println(pitches.get(1));
 <div markdown="1">
 
 ## size()
+
 ```java
 System.out.println(pitches.size());
 ```
@@ -544,6 +559,7 @@ System.out.println(pitches.size());
 <div markdown="1">
 
 ## contains()
+
 ```java
 System.out.println(pitches.contains("123"));
 // 포함된 값일 경우 true 반환
@@ -557,12 +573,16 @@ System.out.println(pitches.contains("123"));
 <div markdown="1">
 
 ## contains()
+
 - 객체
+
 ```java
 System.out.println(pitches.remove("123"));
 // 삭제한 결과 true, false 를 리턴
 ```
+
 - 인덱스
+
 ```java
 System.out.println(pitches.remove(0));
 // 삭제한 결과 삭제한 항목을 리턴
@@ -570,7 +590,6 @@ System.out.println(pitches.remove(0));
 
 </div>
 </details>
-
 
 <details>
 <summary> :pencil: ArrayList indexOf() - 리스트에 동일한 객체가 있는지 검색  </summary>
@@ -603,7 +622,6 @@ System.out.println("searched index " + cellsIndex); // 0
 
 </div>
 </details>
-
 
 ### :pushpin: 문자열의 특정 인덱스 값 치환 방법
 
