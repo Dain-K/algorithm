@@ -664,7 +664,7 @@ class Solution {
 </details>
 
 <details>
-<summary> :pencil: char toCharArray() - 문자열의 특정 인덱스 값 치환  </summary>
+<summary> :pencil: char toCharArray(), string valueOf() - 문자열의 특정 인덱스 값 치환  </summary>
 <div markdown="1">
 
 ```java
@@ -682,6 +682,25 @@ class Main {
 
         // 문자 array을 다시 문자열로 치환
         str = String.valueOf(chars);
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: string 내림차순 정렬 방법  </summary>
+<div markdown="1">
+
+```java
+import java.util.Arrays;
+
+public class ReverStr {
+    public String reversStr(String str){
+        char[] ch = str.thCharArray();
+        Arrays.sort(ch);
+        return new StringBuilder(new String(ch)).reverse().toString();
     }
 }
 ```
