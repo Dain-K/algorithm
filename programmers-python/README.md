@@ -177,3 +177,22 @@ print(list(queue)) #[3,7,1,4]
 
 </div>
 </detail>
+
+<details>
+<summary> :file_folder: key, value </summary>
+<div markdown="1">
+
+## 숫자 문자열과 영단어
+
+```py
+num_dic = {"zero":"0", "one":"1", "two":"2", "three":"3", "four":"4", "five":"5", "six":"6", "seven":"7", "eight":"8", "nine":"9"}
+
+def solution(s):
+    answer = s
+    for key, value in num_dic.items():
+        answer = answer.replace(key, value)
+    return int(answer)
+```
+
+</div>
+</detail>
