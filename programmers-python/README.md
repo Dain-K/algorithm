@@ -196,3 +196,38 @@ def solution(s):
 
 </div>
 </detail>
+
+<details>
+<summary> :file_folder: isdigit() - 문자열이 숫자로만 이루어져 있는지 확인</summary>
+<div markdown="1">
+
+## str.isdigit()
+
+- string 클래스에 있는 메서드
+- 문자열이 숫자로만 이루어져 있는지 확인
+- 단 하나라도 있다면 False 반환
+- 소수점이나 음수를 나타내는 "-" 는 문자로 판단하기 때문에 실수나 음수를 판단하지 못함
+- 오직 0을 포함한 양수형 정수로만 이루어진 문자열만 인식
+
+</div>
+</detail>
+
+<details>
+<summary> :file_folder: isalpha() - 알파벳으로 구성되어있는지 확인</summary>
+<div markdown="1">
+
+## isalpha()
+
+- 알파벳으로 구성되어있는지 확인하는 메서드
+- 숫자 및 공백이 포함되어 있으면 False를 리턴
+
+```py
+Ex1 = 'ABC'
+Ex2 = '123asc'
+
+print(Ex1.isalpha()) # true
+print(Ex2.isalpha()) # false
+```
+
+</div>
+</detail>
