@@ -1,4 +1,34 @@
 <details>
+<summary> :file_folder: len() </summary>
+<div markdown="1">
+
+## len() 으로 리스트 크기 확인
+
+```py
+my_list = []
+print(len(my_list)) # 0
+
+my_list = [1,2,3]
+print(len(my_list)) # 3
+
+my_tuple = (10, 22, 19, 23)
+print(len(my_tuple)) # 4
+
+my_dict = {1: 'a', 2: 'b'}
+print(len(my_dict)) # 2
+
+my_range = range(1, 10)
+print(len(my_range)) # 9
+
+str = 'Python'
+print(len(str)) # 6
+
+```
+
+</div>
+</detail>
+
+<details>
 <summary> :file_folder: 최대공약수, 최소공배수 함수 </summary>
 <div markdown="1">
 
