@@ -29,6 +29,45 @@ print(len(str)) # 6
 </detail>
 
 <details>
+<summary> :file_folder: List(리스트) - 정렬 </summary>
+<div markdown="1">
+
+## List 정렬
+
+- reverse: 리스트를 거꾸로 뒤집음
+
+```py
+a = [4, 8, 9, 52, 1]
+a.reverse()
+a # [1, 52, 9, 8, 4]
+```
+
+- sort: 정렬, 기본값은 오름차순 정렬, reverse 옵션 True 는 내림차순
+
+```py
+a = [1,8,5,4,9]
+a.sort()
+a # [1,4,5,8,9]
+
+a = [1,8,5,4,9]
+a.sort(reverse =True)
+a # [9,8,5,4,1]
+```
+
+- key 옵션
+
+```py
+m = '나는 파이썬을 잘하고 싶다'
+m = m.split()
+m # ['나는', '파이썬을', '잘하고', '싶다']
+m.sort(key=len)
+m #['나는', '싶다', '잘하고', '파이썬을']
+```
+
+</div>
+</detail>
+
+<details>
 <summary> :file_folder: 최대공약수, 최소공배수 함수 </summary>
 <div markdown="1">
 
