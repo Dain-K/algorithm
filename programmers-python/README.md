@@ -26,7 +26,9 @@ print(len(str)) # 6
 ```
 
 </div>
-</detail>
+</details>
+
+### List
 
 <details>
 <summary> :file_folder: List reverse </summary>
@@ -43,7 +45,7 @@ a # [1, 52, 9, 8, 4]
 ```
 
 </div>
-</detail>
+</details>
 
 <details>
 <summary> :file_folder: List sort </summary>
@@ -62,7 +64,7 @@ a # [9,8,5,4,1]
 ```
 
 </div>
-</detail>
+</details>
 
 <details>
 <summary> :file_folder: List sort key </summary>
@@ -79,7 +81,7 @@ m #['나는', '싶다', '잘하고', '파이썬을']
 ```
 
 </div>
-</detail>
+</details>
 
 <details>
 <summary> :file_folder: List count </summary>
@@ -99,7 +101,7 @@ def solution(numbers):
 ```
 
 </div>
-</detail>
+</details>
 
 <details>
 <summary> :file_folder: 최대공약수, 최소공배수 함수 </summary>
@@ -135,7 +137,7 @@ print(c) # 100
 ```
 
 </div>
-</detail>
+</details>
 
 <details>
 <summary> :file_folder: 스택(Stack), 큐(Queue) </summary>
@@ -210,7 +212,7 @@ print(list(queue)) #[3,7,1,4]
 ```
 
 </div>
-</detail>
+</details>
 
 <details>
 <summary> :file_folder: key, value </summary>
@@ -229,7 +231,9 @@ def solution(s):
 ```
 
 </div>
-</detail>
+</details>
+
+### String
 
 <details>
 <summary> :file_folder: string isdigit() - 문자열이 숫자로만 이루어져 있는지 확인</summary>
@@ -244,7 +248,7 @@ def solution(s):
 - 오직 0을 포함한 양수형 정수로만 이루어진 문자열만 인식
 
 </div>
-</detail>
+</details>
 
 <details>
 <summary> :file_folder: string isalpha() - 알파벳으로 구성되어있는지 확인</summary>
@@ -264,4 +268,4 @@ print(Ex2.isalpha()) # false
 ```
 
 </div>
-</detail>
+</details>
