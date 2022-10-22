@@ -707,3 +707,23 @@ public class ReverStr {
 
 </div>
 </details>
+
+<details>
+<summary> :pencil: string 문자열에 숫자만 존재하는지 확인 방법  </summary>
+<div markdown="1">
+
+## matches()
+
+```java
+final String REGEX = "[0-9]+";
+String test = "1234";
+
+if(test.matches(REGEX)) {
+    System.out.println("숫자만 있습니다.");
+}else{
+    System.out.println("숫자 외에 다른 값이 존재합니다.");
+}
+```
+
+</div>
+</details>
