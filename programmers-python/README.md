@@ -104,7 +104,7 @@ def solution(numbers):
 </details>
 
 <details>
-<summary> :file_folder: 최대공약수, 최소공배수 함수 </summary>
+<summary> :file_folder: 최대공약수 math.gcd(), 최소공배수 함수 math.lcm() </summary>
 <div markdown="1">
 
 ## 최대공약수 math.gcd
@@ -251,7 +251,7 @@ def solution(s):
 </details>
 
 <details>
-<summary> :file_folder: string isalpha() - 알파벳으로 구성되어있는지 확인</summary>
+<summary> :file_folder: string isalpha() - 알파벳으로 구성되어있는지 확인 </summary>
 <div markdown="1">
 
 ## isalpha()
