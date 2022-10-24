@@ -664,8 +664,10 @@ class Solution {
 </details>
 
 <details>
-<summary> :pencil: char toCharArray(), string valueOf() - 문자열의 특정 인덱스 값 치환  </summary>
+<summary> :pencil: Char toCharArray(), string valueOf() - 문자열의 특정 인덱스 값 치환  </summary>
 <div markdown="1">
+
+## 문자열의 특정 인덱스 값 치환
 
 ```java
 class Main {
@@ -690,8 +692,10 @@ class Main {
 </details>
 
 <details>
-<summary> :pencil: string 내림차순 정렬 방법  </summary>
+<summary> :pencil: String 내림차순 정렬 방법  </summary>
 <div markdown="1">
+
+## String 내림차순 정렬 방법
 
 ```java
 import java.util.Arrays;
@@ -709,7 +713,7 @@ public class ReverStr {
 </details>
 
 <details>
-<summary> :pencil: string 문자열에 숫자만 존재하는지 확인 방법  </summary>
+<summary> :pencil: String 문자열에 숫자만 존재하는지 확인 방법 </summary>
 <div markdown="1">
 
 ## matches()
@@ -724,6 +728,24 @@ if(test.matches(REGEX)) {
     System.out.println("숫자 외에 다른 값이 존재합니다.");
 }
 ```
+
+</div>
+</details>
+
+### :pushpin: Hash
+
+<details>
+<summary> :pencil: Hash </summary>
+<div markdown="1">
+
+## Hash?
+
+- ArrayList 는 내부 인덱스를 이용하여 검색이 한번에 이루어지기 때문에 빠른 검색 속도를 보장하는 반면, 데이터의 추가 삭제 시 많은 데이터가 밀리거나 당겨지기 때문에 많은 시간이 소요
+- LinkedList 는 추가 삭제 시 인근 노드들의 참조값만 수정해줌으로써 처리가 가능하지만 데이터를 검색할 경우, 해당 노드를 찾기 위해 처음부터 순회 검색을 해야하기 때문에 데이터의 수가 많아질수록 효율이 떨어지는 구조
+- 이러한 한계를 극복하기 위해 제시된 방법 -> `Hash`
+- Hash는 내부적으로 배열을 사용하여 데이터를 저장하므로 빠른 검색속도를 가짐
+- 데이터 추가 삭제 시 기존 데이터를 밀어내거나 당기는 작업이 필요없도록 특별한 알고리즘을 이용하여 데이터와 연관된 고유한 숫자를 만들어 낸 뒤 이를 인덱스로 사용
+- Hash가 내부적으로 사용하는 배열을 Hash Table 이라고 하며 크기에 따라 성능차이가 날 수 있음
 
 </div>
 </details>
