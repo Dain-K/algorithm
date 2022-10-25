@@ -747,5 +747,123 @@ if(test.matches(REGEX)) {
 - 데이터 추가 삭제 시 기존 데이터를 밀어내거나 당기는 작업이 필요없도록 특별한 알고리즘을 이용하여 데이터와 연관된 고유한 숫자를 만들어 낸 뒤 이를 인덱스로 사용
 - Hash가 내부적으로 사용하는 배열을 Hash Table 이라고 하며 크기에 따라 성능차이가 날 수 있음
 
+## Hash Table?
+
+- key-value 에서 key를 테이블에 저장할 때 key 값을 Hash Method를 이용하여 계산 수행, 그 결과값을 배열의 인덱스로 사용하여 저장하는 방식
+
+## HashSet
+
+- null 값 허용
+- :star: 중복을 허용하지 않음
+
+### 중복을 어떻게 제거하는가?
+
+객체를 저장하기 전에 객체의 hashCode() 메소드를 호출해서 해시코드를 얻어 낸 후 다음 저장되어 있는 객체들의 해시 코드와 비교한 뒤 같은 해시 코드가 있다면 다시 equals() 메소드로 두 객체를 비교하여 true가 나오면 동일한 객체로 판단하고 중복 저장을 하지 않는다.
+
+### HashSet 변수 선언
+
+- HashSet<데이터타입> 변수명 = new HashSet<데이터타입>();
+
+```java
+HashSet<integer> set = new HashSet<Integer>();
+HashSet<String> set2 = new HashSet<string>();
+```
+
+### HashSet 값 추가
+
+- add(value) 메소드를 사용하여 값을 추가
+
+```java
+public class HashSetTest {
+    public static void main(String[] args) {
+        HashSet<Integer> set = new HashSet<Integer>();
+
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(1)'
+    }
+}
+```
+
+### HashSet 값 삭제
+
+- remove(value) 메소드를 사용하면 원하는 value 값만 삭제
+
+```java
+public class HashSetTest {
+    public static void main(String[] args) {
+        // Integer
+        HashSet<Integer> set = new HashSet<Integer>();
+        set.remove(1);
+        set.clear();
+    }
+}
+```
+
+### HashSet 값 크기 구하기
+
+- size() 메소드를 사용하여 현재 HashSet의 크기를 구할 수 있음
+- 중복값이 들어오면 자동으로 제거
+
+```java
+public class HashSetTest {
+    public static void main(String[] args) {
+        // Integer
+        HashSet<Integer> set = new HashSet<Integer>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(1);
+        System.out.println("set의 크기: " + set.size()); // 출력: 3
+    }
+}
+```
+
+### HashSet 데이터 출력하기
+
+- 하나의 객체를 가져오고 싶을 경우 Iterator를 사용하여 가져올 수 있음
+
+```java
+public class HashSetTest {
+    public static void main(String[] args) {
+        // Integer
+        HashSet<Integer> set = new HashSet<Integer>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(1);
+        System.out.println("set의 크기: " + set.size()); // 출력: 3
+
+        // Integer 출력
+        Iterator iter = set.iterator();
+        while(iter.hasNext()) {
+            System.out.print(ler.next() + " " );
+        }
+    }
+}
+```
+
+### HashSet 검색하기
+
+- 내부의 원하는 값을 검색할 경우 contains(value) 메소드를 사용
+
+```java
+public class HashSetTest {
+    public static void main(String[] args) {
+        // Integer
+        HashSet<Integer> set = new HashSet<Integer>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(1);
+        System.out.println("1이 있는가: " + set.contains(1)); // 출력: true
+
+
+        }
+    }
+}
+```
+
 </div>
 </details>
