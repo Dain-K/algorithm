@@ -572,7 +572,7 @@ System.out.println(pitches.contains("123"));
 <summary> :pencil: ArrayList remove() -  리스트 객체에 해당되는 항목을 삭제  </summary>
 <div markdown="1">
 
-## contains()
+## remove()
 
 - 객체
 
