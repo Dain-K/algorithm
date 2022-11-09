@@ -351,7 +351,33 @@ System.out.println(str1.trim());
 
 ## equals()
 
-- 두개의 문자열이 동일한지 비교한다.
+- 가지고 있는 값이 동일하면 true 출력
+- == 을 사용하면 주소값을 비교
+
+### ==
+
+```java
+Stirng str1 = "Hello";
+Stirng str2 = "Hello";
+Stirng str3 = new String("Hello");
+
+System.out.println(str1 == str2); // true
+System.out.println(str1 == str3); // false
+```
+
+### A.equals(B)
+
+```java
+Stirng str1 = "Hello";
+Stirng str2 = "Hello";
+Stirng str3 = new String("Hello");
+
+System.out.println(str1.equals(str2)); // true
+System.out.println(str1.equals(str3)); // true
+```
+
+- object 에서 사용하면 위와 같이 결과가 제대로 나오지 않는다.
+
 </div>
 </details>
 
