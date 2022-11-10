@@ -1,8 +1,6 @@
 class Solution {
     public String[] solution(int n, int[] arr1, int[] arr2) {
         String[] answer = new String[n];
-        String[] arrB1 = new String[n];
-        String[] arrB2 = new String[n];
         long plus = 0; 
         int len = 0;
         String blank = " ";
