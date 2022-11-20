@@ -127,7 +127,7 @@ print(c) # 5
 import math
 
 a = math.lcm()
-b = math.clm(0, 2, 4)
+b = math.lcm(0, 2, 4)
 c = math.lcm(10, 5, 100)
 
 print(a) # 1
