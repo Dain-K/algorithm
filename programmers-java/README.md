@@ -894,6 +894,62 @@ public class HashSetTest {
 </div>
 </details>
 
+### :pushpin: Stack
+
+<details>
+<summary> :pencil: Stack </summary>
+<div markdown="1">
+
+## Stack 선언
+
+```java
+import java.util.Stack;
+Stack<Integer> stack = new Stack<>();
+Stack<String> stack = new Stack<>();
+Stack<Character> stack = new Stack<>();
+```
+
+## Stack 값 추가
+
+```java
+Stack<Integer> stack = new Stack<>();
+stack.push(1); // 1 추가
+stack.push(2); // 2 추가
+```
+
+## Stack 값 삭제
+
+```java
+Stack<Integer> stack = new Stack<>();
+stack.push(1);
+stack.push(2);
+stack.pop(); // stack 값 제거 - 2 제거
+stack.clear(); // stack의 전체 값 제거(초기화)
+```
+
+## Stack 가장 상단 값 출력
+
+```java
+Stack<Integer> stack = new Stack<>();
+stack.push(1);
+stack.push(2);
+stack.peek(); // stack의 가장 상단 값 출력 - 2 출력
+```
+
+## Stack 기타 메서드
+
+```java
+Stack<Integer> stack = new Stack<>();
+stack.push(1);
+stack.push(2);
+stack.size(); // stack의 크기 출력:2
+stack.empty(); // stack이 비어있는지 check (비어있다며 true)
+stack.contains(1); // stack에 1이 있는지 check (있다면 true)
+```
+
+</div>
+</details>
+
 ### :pushpin: 피드백
 
 <details>
