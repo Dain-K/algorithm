@@ -49,7 +49,7 @@ public class ConstantTest{
 ### 💡 형 변환
 
 - 서로 다른 자료형 간에 연산등의 수행을 위해 하나의 자료형으로 통일하는 것
-- 묵시적 형 변환(explicit type conversion, 자동 현변환)과 명시적 형 변환(implicit tpye conversion, 강제 형변환)이 있음
+- 묵시적 형 변환(explicit type conversion, 자동 현변환)과 명시적 형 변환(implicit type conversion, 강제 형변환)이 있음
 - 바이트 크기가 작은 자료형에서 큰 자료형으로 형 변환은 자동으로 이루어짐
 - 덜 정밀한 자료형(정수)에서 더 정밀한 자료형(실수)으로 형 변환은 자동으로 이루어짐
 
@@ -100,20 +100,22 @@ package ch10;
 ### 💡 논리 연산자
 
 - 관계 연산자와 혼합하여 많이 사용됨
-  | 연산자 | 기능 | 연산 예 |
-  | :--: | -- | -- |
-  | && (논리곱) | 두 항이 모두 참인 경우에만 결과 값이 참이다. | booleanval = (5 > 3) && (5 > 2); |
-  | (논리합) | 두 항 중 하나의 항만 참이면 결과 값은 참이다. | booleanval = (5 > 3) || (5 < 2); |
-  | ! (부정) | 단항 연산자이다. 참인 경우는 거짓으로 바꾸고, 거짓인 경우 참으로 바꾼다. | booleanval = !(5 > 3); |
+
+| 연산자 | 기능 | 연산 예 |
+| :--: | -- | -- |
+| && (논리곱) | 두 항이 모두 참인 경우에만 결과 값이 참이다. | booleanval = (5 > 3) && (5 > 2); |
+| (논리합) | 두 항 중 하나의 항만 참이면 결과 값은 참이다. | booleanval = (5 > 3) || (5 < 2); |
+| ! (부정) | 단항 연산자이다. 참인 경우는 거짓으로 바꾸고, 거짓인 경우 참으로 바꾼다. | booleanval = !(5 > 3); |
 
 ### 💡 조건 연산자
 
 - 삼항 연산자
 - 조건식의 결과가 true인 경우와 거짓은 경우에 따라 다른 결과가 수행됨
 - if 문을 간단히 표현할 때 사용할 수 있음
-  | 연산자 | 기능 | 연산 예 |
-  | :--: | -- | -- |
-  | 조건식 ? 결과1 : 결과2 | 조건식이 참이면 결과1, 조건식이 거짓이면 결과2가 선택된다. | int num = (5 > 3) ? 10 : 20; |
+
+| 연산자 | 기능 | 연산 예 |
+| :--: | -- | -- |
+| 조건식 ? 결과1 : 결과2 | 조건식이 참이면 결과1, 조건식이 거짓이면 결과2가 선택된다. | int num = (5 > 3) ? 10 : 20; |
 
 ### 💡 비트 연산자
 
@@ -123,7 +125,7 @@ package ch10;
 | :----: | --------------------- | ---------------------------------------- | ----------------- |
 |   ~    | 비트의 반전(1의 보수) | a = ~a;                                  | |
 |   &    | 비트 단위 AND         | 1 & 1 1반환 그 외는 0                    | |
-| (세로) | 비트 단위 OR          | 0                                        | 0 0반환 그 외는 1 |
+| (세로) | 비트 단위 OR          | 0                                        | 0 반환 그 외는 1 |
 |   ^    | 비트 단위 XOP         | 두개의 비트가 서로 다른 경우에 1을 반환  | |
 |   <<   | 왼쪽 shift            | a<<2 변수 a를 2비트 만큼 왼쪽으로 이동   | |
 |   <<   | 오른쪽 shift          | a>>2 변수 a를 2비트 만큼 오른쪽으로 이동 | |
@@ -132,7 +134,7 @@ package ch10;
 
 ### 💡 if 문 (만약에... 라면)
 
-- 주어진 조건에 따라 다른 실행이 이루어 지도록 구현
+- 주어진 조건에 따라 다른 실행이 이루어지도록 구현
 
 ### 💡 switch-case 문
 
@@ -159,7 +161,7 @@ public class SwitchCaseTest {
       case 4, 6, 9, 11 ->
         day = 30;
       default -> {
-        System.out.println("존재하지 않는 달 입니다.");
+        System.out.println("존재하지 않는 month 입니다.");
         day = -1;
       }
     }
@@ -188,7 +190,7 @@ public class SwitchCaseTest {
       case 4, 6, 9, 11 ->
         30;
       default -> {
-        System.out.println("존재하지 않는 달 입니다.");
+        System.out.println("존재하지 않는 month 입니다.");
         yield -1;
       }
     }
@@ -308,7 +310,6 @@ public class ContinueTest {
   }
 
 }
-
 ```
 
 </div>
@@ -1118,9 +1119,10 @@ Customer vc = new VIPCustomer();    // 묵시적
 VIPCustomer vCustomer = (VIPCustomer)vc;       // 명시적
 ```
 
-### 💡 instanceof를 이용하여 인스턴스의 형 체크
+### 💡 instanceOf를 이용하여 인스턴스의 형 체크
 
-- 원래 인스턴스의 형이 맞는지 여부를 체크하는 키워드 맞으면 true 아니면 false를 반환
+- 원래 인스턴스의 형이 맞는지 여부를 체크하는 키워드
+- 맞으면 true 아니면 false를 반환
 
 </div>
 </details>
@@ -1131,7 +1133,7 @@ VIPCustomer vCustomer = (VIPCustomer)vc;       // 명시적
 
 ## 01. Object 클래스 - 모든 클래스의 최상위 클래스
 
-### 💡 toSring() 메서드
+### 💡 toString() 메서드
 
 - 객체의 정보를 String 으로 바꾸어서 사용할 때 쓰임
 - String 이나 Integer 클래스는 이미 재정의되어 있음
@@ -1142,7 +1144,7 @@ VIPCustomer vCustomer = (VIPCustomer)vc;       // 명시적
 
 - 두 인스턴스의 주소값을 비교하여 true/false 반환
 - 재정의 하여 두 인스턴스가 논리적으로 동일함의 여부를 구현
-- 인스턴스가 다르더라도 논리적으로 동릴한 경우 true를 반환하도록 재정의 할 수 있음
+- 인스턴스가 다르더라도 논리적으로 동일한 경우 true를 반환하도록 재정의 할 수 있음
 
 ### 💡 hashCode() 메서드
 
@@ -1153,7 +1155,7 @@ VIPCustomer vCustomer = (VIPCustomer)vc;       // 명시적
 ### 💡 clone() 메서드
 
 - 객체의 원본을 복제하는데 사용하는 메서드
-- 생성과정의 복잡한 과정을 반복하지 않고 복제할 수 잇음
+- 생성과정의 복잡한 과정을 반복하지 않고 복제할 수 있음
 - 객체보호관점에서 위배될 수 있음 -> `implements Cloneable`을 명시해줘야함
 
 ## 03. String, StringBuilder, StringBuffer 클래스, text block
@@ -1166,7 +1168,7 @@ VIPCustomer vCustomer = (VIPCustomer)vc;       // 명시적
 
 ### 💡 StringBuilder, StringBuffer 활용하기
 
-- concat 함수를 사용하여 두 문자를 합치면 메모리 낭비발생 -> `StringBuilder, StringBuffer 활용`
+- concat 함수를 사용하여 두 문자를 합치면 메모리 낭비 발생 -> `StringBuilder, StringBuffer 활용`
 - 내부적으로 가변적인 char[]를 멤버변수로 가짐
 - 단일 Thread 프로그램에서는 StringBuilder 사용을 권장
 - toString() 메서드로 String 반환
