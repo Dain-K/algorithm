@@ -455,10 +455,11 @@ public class Sort {
 
 ```java
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Sort {
     public static void main(String[] args) {
-        int arr[] = {9, 8, 47, 6, 15, 0, 90};
+        integer arr[] = {9, 8, 47, 6, 15, 0, 90};
         Arrays.sort(arr, Collections.reverseOrder());
 
         for(int i: arr) {
