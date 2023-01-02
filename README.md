@@ -1,6 +1,6 @@
 # 📝 Java 프로그래밍
 
-### [Java Study]()
+### 📖 [Java Study](https://github.com/Dain-K/algorithm/blob/master/JAVA.md)
 
 <details>
 <summary> :file_folder: ch 01. 자바기초 </summary>
