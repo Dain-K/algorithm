@@ -2,6 +2,8 @@
 
 ### 📖 [Java Study](https://github.com/Dain-K/algorithm/blob/master/JAVA.md)
 
+### 📖 [Python Study](https://github.com/Dain-K/algorithm/blob/master/PYTHON.md)
+
 <details>
 <summary> :file_folder: ch 01. 자바기초 </summary>
 <div markdown="1">
