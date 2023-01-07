@@ -143,7 +143,7 @@ char c = Integer.toString(num).charAt(0);
 
 ## Char to String
 
-### String.valueOF()
+### String.valueOf()
 
 ```java
 char[] cArr = {'김', '다', '인'};
@@ -154,7 +154,7 @@ System.out.println(str);
 
 ### String 클래스 생성자 이용
 
-- new String(char 배열, 시작 index, 끝 index)
+- new String (char 배열, 시작 index, 끝 index)
 
 ```java
 char[] cArr = {'김', '다', '인'};
@@ -172,7 +172,7 @@ System.out.print(str);
 
 ## String to Char
 
-### charAt
+### charAt()
 
 ```java
 String str = "DAIN";
@@ -208,7 +208,7 @@ for(int i=0 ; i<cArr.length ; i++)
   - 대상이 null 이면 MullPointerException 발생
   - Object 값이 String 이 아니면 ClassCastException 발생
 - "".toString()
-  - 대상이 null 이면 MullPointerException 발생
+  - 대상이 null 이면 NullPointerException 발생
   - Object 에 담긴 값이 String 이 아니라도 출력
 
 ### :one: 덧셈연산자
