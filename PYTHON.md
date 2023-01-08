@@ -1,7 +1,9 @@
 # Python Study
 
+### 📕 List
+
 <details>
-<summary> :file_folder: len() </summary>
+<summary> :file_folder: List len </summary>
 <div markdown="1">
 
 ## len() 으로 리스트 크기 확인
@@ -30,8 +32,6 @@ print(len(str)) # 6
 </div>
 </details>
 
-### List
-
 <details>
 <summary> :file_folder: List reverse </summary>
 <div markdown="1">
@@ -52,6 +52,8 @@ a # [1, 52, 9, 8, 4]
 <details>
 <summary> :file_folder: List sort </summary>
 <div markdown="1">
+    
+## List sort
 
 - sort: 정렬, 기본값은 오름차순 정렬, reverse 옵션 True 는 내림차순
 
@@ -61,7 +63,7 @@ a.sort()
 a # [1,4,5,8,9]
 
 a = [1,8,5,4,9]
-a.sort(reverse =True)
+a.sort(reverse = True)
 a # [9,8,5,4,1]
 ```
 
@@ -72,6 +74,8 @@ a # [9,8,5,4,1]
 <summary> :file_folder: List sort key </summary>
 <div markdown="1">
 
+## List sort key
+    
 - key 옵션
 
 ```py
@@ -89,7 +93,7 @@ m #['나는', '싶다', '잘하고', '파이썬을']
 <summary> :file_folder: List count </summary>
 <div markdown="1">
 
-## count(ele)
+## List count(ele)
 
 - 리스트에 ele 가 몇개 존재하는지 알려줌
 
@@ -235,7 +239,7 @@ def solution(s):
 </div>
 </details>
 
-### String
+### 📙 String
 
 <details>
 <summary> :file_folder: string isdigit() - 문자열이 숫자로만 이루어져 있는지 확인</summary>
