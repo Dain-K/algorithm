@@ -1,7 +1,7 @@
 # BaekJoon Java 피드백
 
 <details>
-<summary> :pencil: 108145번 숫자 카드 </summary>
+<summary> :pencil: 10815번 숫자 카드 </summary>
 <div markdown="1">
 
 ## 숫자카드
