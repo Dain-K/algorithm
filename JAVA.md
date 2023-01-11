@@ -650,6 +650,159 @@ System.out.println("searched index " + cellsIndex); // 0
 </div>
 </details>
 
+### :pushpin: Map
+
+<details>
+<summary> :pencil: Map </summary>
+<div markdown="1">
+
+# 맵 (Map)
+
+맵은 대응 관계를 쉽게 표현할 수 있게 해주는 자료형이다. 맵은 사전(dictionary)과 비슷하다.<br/>
+리스트나 배열처럼 순차적으로 해당 요소 값을 구하지 않고 key를 통해 value를 얻는다. 맵(Map)의 가장 큰 특징이라면 key로 value의 값을 얻는다는 것이다. <br/>
+helloWorld라는 단어를 찾기 위해 사전의 내용을 순차적으로 모두 검색하는 것이 아니라 helloWorld라는 단어가 있는 곳을 바로 확인할 수 있는 것이다.
+
+- Map 역시 List 와 마찬가지로 인터페이스이다.
+- Map 자료형: HashMap, LinkedHashMap, TreeMap 등
+
+## HashMap
+
+자바의 Map 중 가장 기본적인 Map이 HashMap 이다.
+
+### put
+
+- Map에 key, value 데이터 추가하기
+- Key, Value에 String 이외의 자료형은 사용할 수 없다.
+
+```java
+import java.util HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("people", "사람");
+        map.put("soccer", "축구");
+    }
+}
+```
+
+### get
+
+key에 해당하는 value 값을 얻기 위해서는 get 메서드를 사용
+
+```java
+import java.util HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("people", "사람");
+        map.put("soccer", "축구");
+        System.out.println(map.get("people"));
+    }
+}
+
+```
+
+```
+출력: 사람
+```
+
+### containKey
+
+맵(Map)에 해당 키(key)가 있는지를 조사하여 그 유무를 참, 거짓으로 리턴한다.
+
+```java
+import java.util HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("people", "사람");
+        map.put("soccer", "축구");
+        System.out.println(map.containKey("people"));
+    }
+}
+
+```
+
+```
+true
+```
+
+### remove
+
+맵(Map)의 항목을 삭제하는 메서드로 key 값에 해당되는 아이템(key, value)을 삭제한 후 그 value 값을 반환한다.
+
+```java
+import java.util HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("people", "사람");
+        map.put("soccer", "축구");
+        System.out.println(map.remove("people"));
+    }
+}
+```
+
+```
+사람
+```
+
+### size
+
+맵(Map)의 개수를 반환한다.
+
+```java
+import java.util HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("people", "사람");
+        map.put("soccer", "축구");
+        System.out.println(map.size());
+    }
+}
+```
+
+```
+2
+```
+
+### keySet
+
+맵(Map)의 모든 Key를 모아서 반환한다.
+
+```java
+import java.util HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("people", "사람");
+        map.put("soccer", "축구");
+        System.out.println(map.keySet());
+    }
+}
+```
+
+```
+[soccer, people]
+```
+
+keySet() 메서드는 Map의 모든 Key를 모아서 Set 자료형으로 리턴한다.
+Set 자료형은 아래의 코드로 List 자료형으로 바꾸어 사용할 수도 있다.
+
+```java
+List<String> keyList = new ArrayList<>(map.keySet());
+```
+
+</div>
+</details>
+
 ### :pushpin: 문자열의 특정 인덱스 값 치환 방법
 
 <details>
@@ -905,6 +1058,7 @@ public class HashSetTest {
 
 ```java
 import java.util.Stack;
+
 Stack<Integer> stack = new Stack<>();
 Stack<String> stack = new Stack<>();
 Stack<Character> stack = new Stack<>();
@@ -946,6 +1100,129 @@ stack.push(2);
 stack.size(); // stack의 크기 출력:2
 stack.empty(); // stack이 비어있는지 check (비어있다며 true)
 stack.contains(1); // stack에 1이 있는지 check (있다면 true)
+```
+
+</div>
+</details>
+
+### :pushpin: 콘솔 입출력
+
+<details>
+<summary> :pencil: BufferedReader </summary>
+<div markdown="1">
+
+## BufferedReader
+
+사용자가 엔터키를 입력할 때 까지 사용자의 입력을 받을 수 있다.
+
+```java
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Sample {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String str = br.readLine();
+
+        System.out.println(str);
+    }
+}
+```
+
+```
+입력: Hello World!
+출력: Hello World!
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: StringTokenizer </summary>
+<div markdown="1">
+
+## StringTokenizer
+
+StringTokenizer 클래스는 문자열을 지정한 구분자로 문자열을 쪼개주는 클래스이다.
+그렇게 쪼개어진 문자열을 우리는 토큰(token)이라고 부른다.
+
+### 라이브러리
+
+```java
+import java.util.StringTokenizer;
+```
+
+### 생성자
+
+생성자로는 3가지 방식이 있음
+
+#### :one: StringTokenizer st = new StringTokenizer(문자열);
+
+띄어쓰기 기준으로 문자열 분리
+
+```java
+import java.util.StringTokenizer;
+public class Example {
+    public static void main(String[] args) {
+        String str = "hello world! Dain-k blog!"
+        StringTokenizer st = new StringTokenizer(str);
+
+        System.out.println(st.nextToken()); // hello
+        System.out.println(st.nextToken()); // world!
+        System.out.println(st.nextToken()); // Dain-k
+        System.out.println(st.nextToken()); // blog!
+    }
+}
+```
+
+#### :two: StringTokenizer st = new StringTokenizer(문자열, 구분자);
+
+구분자를 기준으로 문자열 분리
+
+```java
+import java.util.StringTokenizer;
+
+public class Example {
+    public static void main(String[] args) {
+        String str = "문!자!열";
+        StringTokenizer st = new StringTokenizer(str, "!", true);
+
+        int i = 1;
+        while(st.hasMoreTokens()){ // 다음 토큰이 있다면
+            System.out.println((i++) + "번째 토큰: " + st.nextToken());
+        }
+    }
+}
+```
+
+#### :three: StringTokenizer st = new StringTokenizer(문자열, 구분자, true/ false);
+
+구분자를 기준으로 문자열을 분리할 때 구분자도 토큰을 넣을지 (true) 구분자는 분리된 문자열 토큰에 포함 안시킬지(false) (디폴트는 false)
+
+```java
+
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: Scanner </summary>
+<div markdown="1">
+
+## Scanner
+
+```java
+import java.util.Scanner;
+
+public class Sample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(sc.next());
+    }
+}
 ```
 
 </div>
