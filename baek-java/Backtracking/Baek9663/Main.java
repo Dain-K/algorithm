@@ -1,4 +1,4 @@
-package STEP13.STEP9663;
+package Backtracking.Baek9663;
 
 import java.util.Scanner;
 
