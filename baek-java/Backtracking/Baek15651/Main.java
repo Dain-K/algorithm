@@ -1,4 +1,4 @@
-package STEP13.Baek15651;
+package Backtracking.Baek15651;
 
 import java.io.BufferedReader;
 import java.io.IOException;
