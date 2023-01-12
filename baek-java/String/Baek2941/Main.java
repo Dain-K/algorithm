@@ -15,5 +15,6 @@ public class Main {
         }
         System.out.println(s.length());
         sc.close();
+        
     }
 }
