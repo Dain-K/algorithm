@@ -1,4 +1,4 @@
-package STEP16.Baek11050;
+package NumberTheory.Baek11050;
 
 import java.util.Scanner;
 
