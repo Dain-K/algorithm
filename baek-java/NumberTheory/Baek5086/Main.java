@@ -6,7 +6,7 @@
  * 출력
  * */
 
-package STEP16.Baek5086;
+package NumberTheory.Baek5086;
 
 import java.util.Scanner;
 
