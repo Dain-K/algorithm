@@ -1,8 +1,8 @@
-package Baek2577;
+
 
 import java.util.*;
 
-public class Main {
+public class B2577 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
