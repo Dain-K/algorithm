@@ -48,6 +48,35 @@ public class EvenOrOdd {
 </div>
 </details>
 
+<details>
+<summary> :pencil: 문자열이 숫자인지 판단 함수  </summary>
+<div markdown="1">
+
+## 문자열이 숫자인지 판단 함수
+
+```java
+public class Example {
+
+    public static void main(String[] args){
+        System.out.println(isNumeric("1"));
+        System.out.println(isNumeric("q1k"));
+    }
+
+    public static boolean isNumeric(String input){
+        try{
+            Integer.parseInt(input);
+            return true;
+        }
+        catch(NumberFormatException e){
+            return false;
+        }
+    }
+}
+```
+
+</div>
+</details>
+
 ### :pushpin: 형변환
 
 <details>
