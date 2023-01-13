@@ -29,6 +29,8 @@ public class B1026 {
 		
 		System.out.println(result);
 
+		sc.close();
+
 	}
 
 }
