@@ -1,8 +1,8 @@
-package STEP4.Baek1110;
+
 
 import java.util.*;
 
-public class Main {
+public class B1110 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
