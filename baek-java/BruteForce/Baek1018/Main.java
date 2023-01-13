@@ -1,4 +1,4 @@
-package STEP10.Baek1018;
+package BruteForce.Baek1018;
 
 public class Main {
 
