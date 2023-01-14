@@ -1,3 +1,5 @@
+package Map;
+
 import java.util.Scanner;
 
 public class B10815 {
