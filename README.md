@@ -323,10 +323,10 @@ public class ContinueTest {
 </details>
 
 <details>
-  <summary> :file_folder: ch 02. 객체지향 입문 </summary>
-  <div markdown="1">
+<summary> :file_folder: ch 02. 객체지향 입문 </summary>
+<div markdown="1">
     
- ## 📖 객체와 객체지향 프로그래밍
+## 📖 객체와 객체지향 프로그래밍
 
 ### 💡 객체 (object)
 
@@ -805,7 +805,7 @@ public void setMonth(int month) {
 
 - 꼭 필요한 정보와 기능만 외부에 오픈함
 - 대부분의 멤버 변수와 메서드를 감추고 외부에 통합된 인터페이스만은 제공하여 일관된 기능을 구현하게 함
-- 각각의 메서드나 멤버변수를 접근함으로써 발생하는 오류를 최소화 한다.
+- 각각의 메서드나 멤버변수를 접근함으로써 발생하는 오류를 최소화 
 
 ## :book: 객체 자신을 가리키는 `this`
 
