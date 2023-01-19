@@ -5,12 +5,15 @@
 ### 📖 [Python Study](https://github.com/Dain-K/algorithm/blob/master/PYTHON.md)
 
 # Java
+
 <details>
 <summary> :file_folder: ch 01. 자바기초 </summary>
 <div markdown="1">
   
 ## 📖 자바 프로그래밍 시작!!
+
 ### 💡 프로그래밍이란
+
 - 프로그래밍: 컴퓨터가 일을 수행하도록 프로그래밍 언어로 명령어 집합(프로그램)을 만드는 일
 - 컴파일: 프로그래밍 언어를 컴퓨터가 실행 가능한 기계어로 만드는 일
 - 컴파일러: 기계어로 바꾸어 주는 프로그램(ex. 자바 컴파일러.gcc)
