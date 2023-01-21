@@ -108,14 +108,14 @@ int num = Integer.valueOf(str);
 
 ## Int to String
 
-### String.valueOf
+### :one: String.valueOf
 
 ```java
 int num = 10;
 String str = String.valueOf(num);
 ```
 
-### String.toString
+### :two: String.toString
 
 ```java
 int num = 10;
@@ -147,14 +147,14 @@ int num1 = Character.getNumericValue(c);
 
 ## Int to Char
 
-### (char)
+### :one: (char)
 
 ```java
 int num = 5;
 char c = (char) num;
 ```
 
-### Integer.toString().charAt()
+### :two: Integer.toString().charAt()
 
 Stirng으로 변환한 다음 char로 변환
 
@@ -172,7 +172,7 @@ char c = Integer.toString(num).charAt(0);
 
 ## Char to String
 
-### String.valueOf()
+### :one: String.valueOf()
 
 ```java
 char[] cArr = {'김', '다', '인'};
@@ -181,7 +181,7 @@ String str = String.valueOf(cArr);
 System.out.println(str);
 ```
 
-### String 클래스 생성자 이용
+### :two: String 클래스 생성자 이용
 
 - new String (char 배열, 시작 index, 끝 index)
 
@@ -201,7 +201,7 @@ System.out.print(str);
 
 ## String to Char
 
-### charAt()
+### :one: charAt()
 
 ```java
 String str = "DAIN";
@@ -209,7 +209,7 @@ char c = str.charAt(0);
 System.out.print("출력 : " + c);
 ```
 
-### toCharArray
+### :two: toCharArray
 
 ```java
 String str = "DAIN";
