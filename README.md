@@ -1271,6 +1271,7 @@ new 키워드를 사용하지 않고 클래스 정보를 활용하여 인스턴�
 - 일렬로 줄 서 있는 모양
 - 순차적으로 입력된 자료를 순서대로 처리하는데 많이 사용되는 자료구조
 - 콜센터에 들어온 문의 전화, 메세지 큐 등에 활용됨
+
 </div>
 </details>
 
@@ -1278,9 +1279,9 @@ new 키워드를 사용하지 않고 클래스 정보를 활용하여 인스턴�
 <summary> 📁 개인공부  </summary>
 <div markdown="1">
 
-  <br>
-  <details>
-  <summary> 📖 자바 입출력 - bufferedreader, bufferedwriter </summary>
+<br>
+<details>
+<summary> 📖 자바 입출력 - bufferedreader, bufferedwriter </summary>
 
 ## 📖 자바 입출력 - bufferedreader, bufferedwriter
 
@@ -1306,10 +1307,10 @@ new 키워드를 사용하지 않고 클래스 정보를 활용하여 인스턴�
 
 ### BufferedWriter
 
-  </details>
+</details>
 
-  <details>
-  <summary> 📖 백트래킹(Backtracking) </summary>
+<details>
+<summary> 📖 백트래킹(Backtracking) </summary>
 
 ## 📖 백트래킹(Backtracking)
 
@@ -1328,8 +1329,7 @@ new 키워드를 사용하지 않고 클래스 정보를 활용하여 인스턴�
 3. 유망한 노드일 경우 그 자식 노드를 계속 탐색한다.
 4. 유망하지 않은 노드일 경우 그 자식노드를 탐색하지 않고 중단한다.
 
-  </details>
-  
+</details>
   
 </div>
 </details>
