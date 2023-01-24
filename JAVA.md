@@ -411,12 +411,22 @@ System.out.println(str1.equals(str3)); // true
 </details>
 
 <details>
-<summary> :pencil: String substring() -   </summary>
+<summary> :pencil: String substring() - 문자열 자르기  </summary>
 <div markdown="1">
 
 ## substring()
 
--
+```java
+public class Test{
+    public static void main(String[] args){
+        String str = "ABCDEFG";
+
+        str.substring(3); // 결과값: DEFG
+        str.substring(3,5); // 결과값: DE
+        str.substring(str.length()-3, str.length()); // 결과값: EFG
+    }
+}
+```
 
 </div>
 </details>
@@ -873,17 +883,6 @@ List<String> keyList = new ArrayList<>(map.keySet());
 </details>
 
 ### :pushpin: 문자열의 특정 인덱스 값 치환 방법
-
-<details>
-<summary> :pencil: String substring() - 문자열의 특정 인덱스 값 치환  </summary>
-<div markdown="1">
-
-## substring()
-
-- String.substring(int, int)
-
-</div>
-</details>
 
 <details>
 <summary> :pencil: String StringBuilder setCharAt() - 문자열의 특정 인덱스 값 치환  </summary>
