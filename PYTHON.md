@@ -93,9 +93,9 @@ m #['나는', '싶다', '잘하고', '파이썬을']
 <summary> :file_folder: List count </summary>
 <div markdown="1">
 
-## List count(ele)
+## List count(element)
 
-- 리스트에 ele 가 몇개 존재하는지 알려줌
+- 리스트에 element 가 몇개 존재하는지 알려줌
 
 ```py
 def solution(numbers):
