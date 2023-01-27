@@ -85,14 +85,14 @@ public class Example {
 
 ## String to int
 
-### Integer.parseInt
+### :one: Integer.parseInt
 
 ```java
 String a = "10";
 int num = Integer.parseInt(a);
 ```
 
-### Integer.valueOf
+### :two: Integer.valueOf
 
 ```java
 String str = "10";
