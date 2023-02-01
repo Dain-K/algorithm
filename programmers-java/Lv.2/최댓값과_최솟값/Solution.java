@@ -1,3 +1,5 @@
+package 최댓값과_최솟값;
+
 import java.util.Arrays;
 
 class Solution {
