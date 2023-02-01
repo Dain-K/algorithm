@@ -787,7 +787,7 @@ public class Sample {
 출력: 사람
 ```
 
-### containKey
+### containsKey
 
 맵(Map)에 해당 키(key)가 있는지를 조사하여 그 유무를 참, 거짓으로 리턴한다.
 
@@ -799,7 +799,7 @@ public class Sample {
         HashMap<String, String> map = new HashMap<>();
         map.put("people", "사람");
         map.put("soccer", "축구");
-        System.out.println(map.containKey("people"));
+        System.out.println(map.containsKey("people"));
     }
 }
 
