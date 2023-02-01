@@ -879,6 +879,39 @@ Set 자료형은 아래의 코드로 List 자료형으로 바꾸어 사용할 �
 List<String> keyList = new ArrayList<>(map.keySet());
 ```
 
+### getOrDefault
+
+찾는 키가 존재한다면 찾는 키의 값을 반환하고 없다면 dafault 값을 반환하는 메서드
+
+#### :pushpin: 사용방법
+
+```java
+getOrDefault(Object key, V DefalutValue)
+```
+
+- key: map 요소의 키이다.
+- dafaultValue: 지정된 키로 매핑된 값이 없거나 null 이면 반환하는 기본 값이다.
+
+#### :pushpin: 예제
+
+```java
+import java.util.HashMap;
+
+public class Example {
+    public static void main(String arg[]) {
+        String[] abc = {"A", "B", "C", "C"};
+        HashMap<String, Integer> hashmap = new HashMap<>();
+
+        for(String key: abc) {
+            hashmap.put(key, hashmap.getOrDefault(key, 0) + 1);
+        }
+
+        System.out.println("출력결과: " + hashmap);
+        // 출력결과: {A=1, B=1, C=2}
+    }
+}
+```
+
 </div>
 </details>
 
