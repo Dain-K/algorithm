@@ -1,7 +1,5 @@
 package 큰_수_만들기;
 
-import java.util.*;
-
 class Solution {
     public String solution(String number, int k) {
         StringBuilder sb = new StringBuilder();
