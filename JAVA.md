@@ -1,5 +1,7 @@
 # Java Study
 
+### ![:pushpin: 형변환]()
+
 <details>
 <summary> :pencil: 문자길이 구하기  </summary>
 <div markdown="1">
@@ -71,152 +73,6 @@ public class Example {
             return false;
         }
     }
-}
-```
-
-</div>
-</details>
-
-### :pushpin: 형변환
-
-<details>
-<summary> :pencil: String to int  </summary>
-<div markdown="1">
-
-## String to int
-
-### :one: Integer.parseInt
-
-```java
-String a = "10";
-int num = Integer.parseInt(a);
-```
-
-### :two: Integer.valueOf
-
-```java
-String str = "10";
-int num = Integer.valueOf(str);
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: Int to String  </summary>
-<div markdown="1">
-
-## Int to String
-
-### :one: String.valueOf
-
-```java
-int num = 10;
-String str = String.valueOf(num);
-```
-
-### :two: String.toString
-
-```java
-int num = 10;
-String str = String.toString(num);
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: Char to Int </summary>
-<div markdown="1">
-
-## Char to Int
-
-### Character.getNumericValue
-
-```java
-char c = '9';
-int num1 = Character.getNumericValue(c);
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: Int to Char </summary>
-<div markdown="1">
-
-## Int to Char
-
-### :one: (char)
-
-```java
-int num = 5;
-char c = (char) num;
-```
-
-### :two: Integer.toString().charAt()
-
-Stirng으로 변환한 다음 char로 변환
-
-```java
-int num = 5;
-char c = Integer.toString(num).charAt(0);
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: Char to String </summary>
-<div markdown="1">
-
-## Char to String
-
-### :one: String.valueOf()
-
-```java
-char[] cArr = {'김', '다', '인'};
-String str = String.valueOf(cArr);
-
-System.out.println(str);
-```
-
-### :two: String 클래스 생성자 이용
-
-- new String (char 배열, 시작 index, 끝 index)
-
-```java
-char[] cArr = {'김', '다', '인'};
-String str = new String(cArr, 1, 2);
-
-System.out.print(str);
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: String to Char  </summary>
-<div markdown="1">
-
-## String to Char
-
-### :one: charAt()
-
-```java
-String str = "DAIN";
-char c = str.charAt(0);
-System.out.print("출력 : " + c);
-```
-
-### :two: toCharArray
-
-```java
-String str = "DAIN";
-char [] cArr = str.toCharArray();
-for(int i=0 ; i<cArr.length ; i++)
-{
-	System.out.print(cArr[i] + " ");
 }
 ```
 
@@ -729,6 +585,104 @@ System.out.println("searched index " + cellsIndex); // 0
 </div>
 </details>
 
+### :pushpin: 문자열의 특정 인덱스 값 치환 방법
+
+<details>
+<summary> :pencil: String StringBuilder setCharAt() - 문자열의 특정 인덱스 값 치환  </summary>
+<div markdown="1">
+
+## setCharAt()
+
+- 문자열의 특정 인덱스에 있는 문자를 효율적으로 교체
+
+```java
+class Solution {
+    public String solution(String phone_number) {
+        String answer = "";
+        int length = phone_number.length();
+        StringBuilder sb = new StringBuilder(phone_number);
+
+        for(int i = 0; i < length - 4; i++){
+            sb.setCharAt(i, '*');
+        }
+        answer = sb.toString();
+        return answer;
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: Char toCharArray(), string valueOf() - 문자열의 특정 인덱스 값 치환  </summary>
+<div markdown="1">
+
+## 문자열의 특정 인덱스 값 치환
+
+```java
+class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        char ch = "_";
+        int pos = 5;
+
+        // 주어진 문자열을 문자 array 로 치환
+        char[] chars = str.toCharArray();
+
+        // char array의 지정된 위치에 있는 문자 교체
+        chars[pos] = ch;
+
+        // 문자 array을 다시 문자열로 치환
+        str = String.valueOf(chars);
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String 내림차순 정렬 방법  </summary>
+<div markdown="1">
+
+## String 내림차순 정렬 방법
+
+```java
+import java.util.Arrays;
+
+public class ReverStr {
+    public String reversStr(String str){
+        char[] ch = str.thCharArray();
+        Arrays.sort(ch);
+        return new StringBuilder(new String(ch)).reverse().toString();
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String 문자열에 숫자만 존재하는지 확인 방법 </summary>
+<div markdown="1">
+
+## matches()
+
+```java
+final String REGEX = "[0-9]+";
+String test = "1234";
+
+if(test.matches(REGEX)) {
+    System.out.println("숫자만 있습니다.");
+}else{
+    System.out.println("숫자 외에 다른 값이 존재합니다.");
+}
+```
+
+</div>
+</details>
+
 ### :pushpin: Map
 
 <details>
@@ -909,104 +863,6 @@ public class Example {
         System.out.println("출력결과: " + hashmap);
         // 출력결과: {A=1, B=1, C=2}
     }
-}
-```
-
-</div>
-</details>
-
-### :pushpin: 문자열의 특정 인덱스 값 치환 방법
-
-<details>
-<summary> :pencil: String StringBuilder setCharAt() - 문자열의 특정 인덱스 값 치환  </summary>
-<div markdown="1">
-
-## setCharAt()
-
-- 문자열의 특정 인덱스에 있는 문자를 효율적으로 교체
-
-```java
-class Solution {
-    public String solution(String phone_number) {
-        String answer = "";
-        int length = phone_number.length();
-        StringBuilder sb = new StringBuilder(phone_number);
-
-        for(int i = 0; i < length - 4; i++){
-            sb.setCharAt(i, '*');
-        }
-        answer = sb.toString();
-        return answer;
-    }
-}
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: Char toCharArray(), string valueOf() - 문자열의 특정 인덱스 값 치환  </summary>
-<div markdown="1">
-
-## 문자열의 특정 인덱스 값 치환
-
-```java
-class Main {
-    public static void main(String[] args) {
-        String str = "Hello World";
-        char ch = "_";
-        int pos = 5;
-
-        // 주어진 문자열을 문자 array 로 치환
-        char[] chars = str.toCharArray();
-
-        // char array의 지정된 위치에 있는 문자 교체
-        chars[pos] = ch;
-
-        // 문자 array을 다시 문자열로 치환
-        str = String.valueOf(chars);
-    }
-}
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: String 내림차순 정렬 방법  </summary>
-<div markdown="1">
-
-## String 내림차순 정렬 방법
-
-```java
-import java.util.Arrays;
-
-public class ReverStr {
-    public String reversStr(String str){
-        char[] ch = str.thCharArray();
-        Arrays.sort(ch);
-        return new StringBuilder(new String(ch)).reverse().toString();
-    }
-}
-```
-
-</div>
-</details>
-
-<details>
-<summary> :pencil: String 문자열에 숫자만 존재하는지 확인 방법 </summary>
-<div markdown="1">
-
-## matches()
-
-```java
-final String REGEX = "[0-9]+";
-String test = "1234";
-
-if(test.matches(REGEX)) {
-    System.out.println("숫자만 있습니다.");
-}else{
-    System.out.println("숫자 외에 다른 값이 존재합니다.");
 }
 ```
 
@@ -1201,6 +1057,77 @@ stack.push(2);
 stack.size(); // stack의 크기 출력:2
 stack.empty(); // stack이 비어있는지 check (비어있다며 true)
 stack.contains(1); // stack에 1이 있는지 check (있다면 true)
+```
+
+</div>
+</details>
+
+### :pushpin: Queue
+
+<details>
+<summary> :pencil: Priority Queue (우선 순위 큐) </summary>
+<div markdown="1">
+
+## Priority Queue
+
+- FIFO(First In First Out) 구조
+- 데이터가 들어온 순서대로 데이터가 나가는 것이 아닌, 우선순위를 먼저 결정하고 그 우선순위가 높은 데이터가 먼저 나가는 자료구조
+- priority queue를 사용하기 위해서는 우선순위 큐에 저장할 객체는 필수적으로 Comparable Interface를 구현해야함
+- priority queue는 Heap을 이용하여 구현하는 것이 일반적
+
+### 특징
+
+1. 높은 우선순위의 요소를 먼저 꺼내서 처리하는 구조
+2. 내부 요소는 힙으로 구성되어 이진트리 구조
+3. 힙으로 구성되므로 시간복잡도는 O(NLogN)
+4. 우선순위를 중요시해야하는 상황에서 주로 사용
+
+### 선언
+
+```java
+import java.util.PriorityQueue;
+import java.util.Collections;
+
+// 낮은 숫자가 우선 순위인 int 형 우선 순위 큐 선언
+PriorityQueue<Integer> priorityQueueLowest = new PriorityQueue<>();
+
+//높은 숫자가 우선 순위인 int 형 우선순위 큐 선언
+PriorityQueue<Integer> priorityQueueHighest = new PriorityQueue<>(Collections.reverseOrder());
+```
+
+### add
+
+```java
+priorityQueueLowest.add(1);
+priorityQueueLowest.add(10);
+priorityQueueLowest.offer(100);
+
+priorityQueueHighest.add(1);
+priorityQueueHighest.add(10);
+priorityQueueHighest.offer(100);
+```
+
+### poll, remove, peek, element, clear
+
+```java
+// 첫번째 값을 반환하고 제거, 비어있다면 null
+priorityQueueLowest.poll();
+
+// 첫번째 값을 제거, 비어있다면 예외 발생
+priorityQueueLowest.remove();
+
+// 첫번째 값을 반환만 하고 제거하지 않음
+// 큐가 비어있다면 null 반환
+priorityQueueLowest.peek();
+
+// 첫번째 값을 반환만 하고 제거하지 않음
+// 큐가 비어있다면 예외 발생
+priorityQueueLowest.element();
+
+// 초기화
+priorityQueueLowest.clear();
+
+
 ```
 
 </div>
