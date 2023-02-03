@@ -1,6 +1,6 @@
 # Java Study
 
-### ![:pushpin: 형변환]()
+### :pushpin: [형변환](https://github.com/Dain-K/algorithm/blob/master/JavaStudy/%ED%98%95%EB%B3%80%ED%99%98.md)
 
 <details>
 <summary> :pencil: 문자길이 구하기  </summary>
