@@ -569,6 +569,7 @@ System.out.println(pitches.remove(0));
 ```java
 String[] fruitsArr = {"apple", "banana", "apple", "mango"};
 ArrayList<String> fruits = new ArrayList<>(Arrays.asList(fruitsArray));
+
 System.out.println("indexOF(apple): " + fruits.indexOf("apple")); // 0
 System.out.println("indexOF(kiwi): " + fruits.indexOf("kiwi")); // -1
 ```
