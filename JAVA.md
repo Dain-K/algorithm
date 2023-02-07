@@ -286,6 +286,46 @@ public class Test{
 
 </div>
 </details>
+    
+<details>
+<summary> :pencil: String startsWith() / endsWith()  </summary>
+<div markdown="1">
+
+## startsWith()
+- 대상 문자열이 특정 문자 또는 문자열로 시작하는지 체크하는 함수
+- 해당 문자열로 시작되는지 여부를 확인하고 boolean에 맞춰 true/false 값을 리턴
+
+```java
+public class Example{
+    public static void main(String[] args) {
+        String s = "자바 코딩 테스트";
+        System.out.println(s.startsWith("자")); // false
+        System.out.println(s.startsWith("자바")); // true
+        System.out.println(s.startsWith("자바 ")); // true
+        System.out.println(s.startsWith("자바  ")); // false
+    }
+}
+```
+    
+## endssWith()
+- 대상 문자열이 특정 문자 또는 문자열로 끝나는지 체크하는 함수
+- 해당 문자열로 시작되는지 여부를 확인하고 boolean에 맞춰 true/false 값을 리턴
+
+```java
+public class Example{
+    public static void main(String[] args) {
+        String s = "자바 코딩 테스트";
+        System.out.println(s.endsWith("테스트")); // true
+        System.out.println(s.endsWith("테")); // false
+        System.out.println(s.endsWith("트")); // true
+        System.out.println(s.endsWith(" 테스트")); // true
+    }
+}
+```
+
+</div>
+</details>
+    
 
 ### :pushpin: char
 
