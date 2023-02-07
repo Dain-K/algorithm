@@ -164,3 +164,64 @@ class Solution {
 
 </div>
 </details>
+
+<details>
+<summary> :pencil: 전화번호 목록 </summary>
+<div markdown="1">
+
+## 전화번호 목록
+
+### 1차 풀이 - 실패
+
+```java
+import java.util.Arrays;
+import java.util.HashSet;
+
+class Solution {
+    public boolean solution(String[] phone_book) {
+        boolean answer = true;
+        Arrays.sort(phone_book);
+        for(int i = 0; i < phone_book.length - 1; i++) {
+            if(phone_book[i].equals(phone_book[i+1].substring(0, phone_book[i].length()))) {
+                answer = false;
+                break;
+            }
+        }
+
+        return answer;
+    }
+}
+```
+
+- 런타임 에러 발생
+
+  ![전화번호목록_1차시도](https://user-images.githubusercontent.com/81922587/217159677-419ba39e-e582-41c2-8e6d-d92223a64cea.png)
+
+  - 배열에서 탐색하여 오류가 발생하는 것 같음
+  - 배열을 사용하지 않고 map으로 탐색하여 문제를 해결하고자 함
+
+## 2차 풀이 - 성공
+
+```java
+import java.util.Map;
+import java.util.HashMap;
+
+class Solution {
+    public boolean solution(String[] phone_book) {
+        boolean answer = true;
+        Map<String, Integer> map = new HashMap<>();
+        for(String s: phone_book) map.put(s, 1);
+
+        for(String s: phone_book) {
+            for(int i = 1; i < s.length(); i++) {
+                if(map.containsKey(s.substring(0,i))) return answer = false;
+            }
+        }
+
+        return answer;
+    }
+}
+```
+
+</div>
+</details>
