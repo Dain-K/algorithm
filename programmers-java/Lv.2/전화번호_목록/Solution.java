@@ -11,8 +11,7 @@ class Solution {
             for(int i = 1; i < s.length(); i++) {
                 if(map.containsKey(s.substring(0,i))) return answer = false;
             }
-        }
-        
+        }  
         return answer;
     }
 }
