@@ -6,8 +6,6 @@
 
 ## [1차] 비밀지도
 
-### 내 풀이
-
 ```java
 class Solution {
     public String[] solution(int n, int[] arr1, int[] arr2) {
