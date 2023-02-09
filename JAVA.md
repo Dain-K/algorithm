@@ -292,6 +292,7 @@ public class Test{
 <div markdown="1">
 
 ## startsWith()
+
 - 대상 문자열이 특정 문자 또는 문자열로 시작하는지 체크하는 함수
 - 해당 문자열로 시작되는지 여부를 확인하고 boolean에 맞춰 true/false 값을 리턴
 
@@ -306,8 +307,9 @@ public class Example{
     }
 }
 ```
-    
+
 ## endssWith()
+
 - 대상 문자열이 특정 문자 또는 문자열로 끝나는지 체크하는 함수
 - 해당 문자열로 시작되는지 여부를 확인하고 boolean에 맞춰 true/false 값을 리턴
 
@@ -325,7 +327,7 @@ public class Example{
 
 </div>
 </details>
-    
+
 
 ### :pushpin: char
 
@@ -1103,6 +1105,40 @@ stack.contains(1); // stack에 1이 있는지 check (있다면 true)
 </div>
 </details>
 
+### :pushpin: Heap
+
+<details>
+<summary> :pencil: Heap </summary>
+<div markdown="1">
+
+## Heap의 특징
+
+- 힙은 완전 이진 트리 자료구조의 일종
+  - 완전 이진 트리란 루트 노드부터 시작하여 왼쪽 자식 노드, 오른쪽 자식 노드 순서대로 데이터가 차례대로 삽입되는 트리(tree)를 의미
+- 힙에서는 항상 루트 노드(root node)를 제거
+- 최소 힙(min heap)
+  - 루트 노드가 가장 작은 값을 가짐
+  - 따라서 값이 작은 데이터가 우선적으로 제거
+- 최대 힙(max heap)
+  - 루트 노드가 가장 큰 값을 가짐
+  - 따라서 값이 큰 데이터가 우선적으로 제거
+
+## 최소 힙 구성 함수: Min-Heapify()
+
+- (상향식) 부모 노드로 거슬러 올라가며, 부모보다 자신의 값이 더 작은 경우에 위치를 교체
+
+### 힙에 새로운 원소가 삽입될 때
+
+- 새로운 원소가 삽입되었을 때 O(logN)의 시간 복잡도로 힙 성질을 유지하도록 할 수 있음
+
+### 힙에서 원소가 제거될 때
+
+- 새로운 원소가 삽입되었을 때 O(logN)의 시간 복잡도로 힙 성질을 유지하도록 할 수 있음
+- 이후에 루트 노드에서부터 하향식으로(더 작은 자식 노드로) Heapify()를 진행함
+
+</div>
+</details>
+
 ### :pushpin: Queue
 
 <details>
@@ -1113,6 +1149,7 @@ stack.contains(1); // stack에 1이 있는지 check (있다면 true)
 
 - FIFO(First In First Out) 구조
 - 데이터가 들어온 순서대로 데이터가 나가는 것이 아닌, 우선순위를 먼저 결정하고 그 우선순위가 높은 데이터가 먼저 나가는 자료구조
+- 물건 데이터를 자료구조에 넣었다가 가치가 높은 물건부터 꺼내서 확인해야할 때
 - priority queue를 사용하기 위해서는 우선순위 큐에 저장할 객체는 필수적으로 Comparable Interface를 구현해야함
 - priority queue는 Heap을 이용하여 구현하는 것이 일반적
 
