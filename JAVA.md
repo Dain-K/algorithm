@@ -461,7 +461,8 @@ public class ContainsTest {
 ## List 와 ArrayList
 
 - `List` = Interface
-- `ArrayList` = Class <br/>
+- `ArrayList` = Class 
+<br/>
   List 와 ArrayList의 가장 큰 차이는 크기가 정해져 있지 않고 동적으로 변한다. <br/>
   예를 들어, 배열의 크기가 5라면 5개 이상의 값을 담을 수 없지만 list는 크기가 정해져있지 않아 원하는 만큼 값을 담을 수 있다. <br/>
   List 에는 ArrayList, Vector, LinkedList 등의 인터페이스를 구현한 자료형이 있다. <br/>
@@ -622,7 +623,7 @@ System.out.println("indexOF(kiwi): " + fruits.indexOf("kiwi")); // -1
 int[] arr = {1,8,5,69,75,15,10};
 
 int cellsIndex = Arrays.asList(arr).indexOf(75);
-System.out.println("searched index " + cellsIndex); // 0
+System.out.println("searched index " + cellsIndex); // 출력: 0
 ```
 
 </div>
