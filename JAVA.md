@@ -2,6 +2,85 @@
 
 ### :pushpin: [형변환](https://github.com/Dain-K/algorithm/blob/master/JavaStudy/%ED%98%95%EB%B3%80%ED%99%98.md)
 
+### :pushpin: Math
+
+#### 소수점 올림/버림
+
+<details>
+<summary> :pencil: Math.ceil()</summary>
+<div markdown="1">
+
+## Nath.ceil()
+
+- 소수점 올림, 정수 반환
+
+```java
+double pie = 3.14159265358979;
+System.out.println("소수점 올림: " + Math.ceil(pie)); // 결과: 4
+System.out.println("셋째 자리 올림: " + Math.ceil(pie * 100) / 100.0); // 결과: 3.15
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: Math.floor()</summary>
+<div markdown="1">
+
+## Nath.floor()
+
+- 소수점 버림, 정수 반환
+
+```java
+double pie = 3.14159265358979;
+System.out.println("소수점 버림: " + Math.floor(pie)); // 결과: 3
+System.out.println("넷째 자리 버림: " + Math.floor(pie * 1000) / 1000.0); // 결과: 3.141
+```
+
+</div>
+</details>
+
+#### 소수점 반올림
+
+<details>
+<summary> :pencil: Math.round()  </summary>
+<div markdown="1">
+
+## Nath.round()
+
+- 실수의 소수점 첫번째 자리를 반올림하여 정수로 리턴
+- 이를 활용하여 소수점 몇번째 자리까지 나타내는 것도 가능
+
+```java
+double pie = 3.14159265358979;
+System.out.println(Math.round(pie)); // 결과: 3
+System.out.println(Math.round(pie*100)/100.0); // 결과: 3.14
+System.out.println(Math.round(pie*1000)/1000.0); // 결과: 3.142
+```
+
+</div>
+</details>
+
+<details>
+<summary> :pencil: String.format()  </summary>
+<div markdown="1">
+
+## String.format()
+
+- Math.round() 함수와 같이 소수점 n번째 자리까지 반올림하여 나타낼 수 있음
+
+```java
+double pie = 3.14159265358979;
+double money = 4424.243423;
+
+System.out.println(String.format("%.2f", pie)); // 결과: 3.14
+System.out.println(String.format("%.3f", pie)); // 결과: 3.142
+System.out.println(String.format("%,.3f", money)); // 결과: 4,424.243
+```
+
+</div>
+</details>
+
 <details>
 <summary> :pencil: 문자길이 구하기  </summary>
 <div markdown="1">
@@ -328,7 +407,6 @@ public class Example{
 </div>
 </details>
 
-
 ### :pushpin: char
 
 <details>
@@ -461,8 +539,8 @@ public class ContainsTest {
 ## List 와 ArrayList
 
 - `List` = Interface
-- `ArrayList` = Class 
-<br/>
+- `ArrayList` = Class
+  <br/>
   List 와 ArrayList의 가장 큰 차이는 크기가 정해져 있지 않고 동적으로 변한다. <br/>
   예를 들어, 배열의 크기가 5라면 5개 이상의 값을 담을 수 없지만 list는 크기가 정해져있지 않아 원하는 만큼 값을 담을 수 있다. <br/>
   List 에는 ArrayList, Vector, LinkedList 등의 인터페이스를 구현한 자료형이 있다. <br/>
