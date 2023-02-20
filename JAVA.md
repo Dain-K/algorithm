@@ -991,6 +991,125 @@ public class Example {
 </div>
 </details>
 
+<details>
+<summary> :pencil: Map key, value로 정렬 </summary>
+<div markdown="1">
+
+## key 값을 기준으로 정렬
+
+- map은 keySet을 이용하여 정렬
+- 오름차순 시 Collection.sort()
+- 내림차순 시 Collection.reverse()
+
+```java
+import java.util.*;
+
+public class Example {
+
+    public static void main(String[] args) {
+
+        Map<String, Integer> map = new HashMap<>();
+
+        map.put("A", 10);
+        map.put("D", 30);
+        map.put("C", 20);
+        map.put("B", 40);
+
+        List<String> keySet = new ArrayList<>(map.keySet());
+
+        // 키 값으로 오름차순 정렬
+        Collections.sort(keySet);
+
+        for(String key: keySet) {
+            System.out.print("Key: " + key);
+            System.out.println(", Val: " + map.get(key));
+        }
+
+        /* 결과
+         * Key: A, Val: 10
+         * Key: B, Val: 40
+         * Key: C, Val: 20
+         * Key: D, Val: 30
+        */
+
+        // 키 값으로 내림차순 정렬
+        Collections.reverse(keySet);
+
+        for(String key: keySet) {
+            System.out.print("Key: " + key);
+            System.out.println(", Val: " + map.get(key));
+        }
+
+        /* 결과
+         * Key: D, Val: 30
+         * Key: C, Val: 20
+         * Key: B, Val: 40
+         * Key: A, Val: 10
+        */
+    }
+}
+```
+
+## Value 값을 기준으로 정렬하기
+
+```java
+import java.util.*;
+
+public class Example {
+
+    public static void main(String[] args) {
+
+        Map<String, Integer> map = new HashMap<>();
+
+        map.put("A", 10);
+        map.put("D", 30);
+        map.put("C", 20);
+        map.put("B", 40);
+
+        List<String> keySet = new ArrayList<>(map.keySet());
+
+        // Value 값으로 오름차순 정렬
+        keySet.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, o2) {
+                return map.get(o1).compareTo(map.get(o2));
+            }
+        })
+
+        for(String key: keySet) {
+            System.out.print("Key: " + key);
+            System.out.println(", Val: " + map.get(key));
+        }
+
+        /* 결과
+         * Key: A, Val: 10
+         * Key: C, Val: 20
+         * Key: D, Val: 30
+         * Key: B, Val: 40
+        */
+
+        // Value 값으로 내림차순 정렬
+        // 위 comparator 람다 표현식으로
+        keySet.sort((o1, o2) -> map.get(o2).compareTo(map.get(o1)));
+
+        for(String key: keySet) {
+            System.out.print("Key: " + key);
+            System.out.println(", Val: " + map.get(key));
+        }
+
+        /* 결과
+         * Key: B, Val: 40
+         * Key: D, Val: 30
+         * Key: C, Val: 20
+         * Key: A, Val: 10
+        */
+    }
+}
+```
+
+</div>
+</details>
+
 ### :pushpin: Hash
 
 <details>
