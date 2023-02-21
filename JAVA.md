@@ -7,7 +7,7 @@
 #### 소수점 올림/버림
 
 <details>
-<summary> :pencil: Math.ceil()</summary>
+<summary> :pencil: Math.ceil() </summary>
 <div markdown="1">
 
 ## Nath.ceil()
