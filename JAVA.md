@@ -302,8 +302,7 @@ System.out.println(str1.toLowerCase());
 ```java
 String str1 = "   공백 제거   ";
 
-System.out.println(str1.trim());
-// 출력: 공백 제거
+System.out.println(str1.trim()); // 출력: 공백 제거
 ```
 
 </div>
