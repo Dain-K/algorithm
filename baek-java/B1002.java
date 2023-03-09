@@ -31,6 +31,7 @@ public class B1002 {
 			}
 			System.out.println(result);
 		}
+		sc.close();
 		
 		
 	}
