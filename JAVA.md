@@ -684,7 +684,7 @@ System.out.println(pitches.remove(0));
 - 존재하면 그 인덱스를 리턴한다.
 - 존재하지 않는다면 -1 리턴한다.
 
-### example :one:
+### :one: example 
 
 ```java
 String[] fruitsArr = {"apple", "banana", "apple", "mango"};
@@ -694,7 +694,7 @@ System.out.println("indexOF(apple): " + fruits.indexOf("apple")); // 0
 System.out.println("indexOF(kiwi): " + fruits.indexOf("kiwi")); // -1
 ```
 
-### example :two:
+### :two: example 
 
 ```java
 int[] arr = {1,8,5,69,75,15,10};
