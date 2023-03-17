@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class B2587 {
+public class B2587_대표값2 {
 
 	public static void main(String[] args) {
 			
