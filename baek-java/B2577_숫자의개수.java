@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class B2577 {
+public class B2577_숫자의개수 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
