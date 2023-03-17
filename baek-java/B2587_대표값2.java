@@ -2,11 +2,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class B2587_대표값2 {
-
 	public static void main(String[] args) {
 			
 		Scanner sc = new Scanner(System.in);
-		
 		int[] num = new int[5];
 		int sum = 0;
 		
@@ -21,5 +19,4 @@ public class B2587_대표값2 {
 
 		sc.close();
 	}
-		
 }
