@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class B1026 {
+public class B1026_보물 {
 
 	public static void main(String[] args) {
 			
