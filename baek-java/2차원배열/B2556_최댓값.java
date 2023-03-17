@@ -3,9 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main
-{
-	
+public class B2556_최댓값 {
     public static void main(String args[]) throws IOException
     {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -13,7 +11,6 @@ public class Main
         int max = -1;
         int N = 0;
         int M = 0;
-         
         for(int i = 0; i < 9; i++) {
         	StringTokenizer st = new StringTokenizer(br.readLine());
         	for(int j = 0; j < 9; j++) {
@@ -28,5 +25,4 @@ public class Main
         System.out.println(max);
         System.out.println(N + " " + M);
     }
-    
 }
