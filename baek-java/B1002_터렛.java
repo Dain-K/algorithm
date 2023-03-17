@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class B1002 {
+public class B1002_터렛 {
 
 	public static void main(String[] args) {
 			
