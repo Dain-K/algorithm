@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Baek1712 {
+public class B1712_손익분기점 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int A = sc.nextInt();
