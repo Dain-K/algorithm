@@ -1,11 +1,11 @@
-package 정올_1146_선택정렬;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 정올_1146_선택정렬_김다인 {
+public class J1146_선택정렬_김다인 {
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
