@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class B14889_스타트와링크 {
+public class B14889__스타트와링크 {
 	// BOJ / 14889번 / 스타트와 링크 
 	// 브루트포스 알고리즘 / 백트래킹
 	static int N, min;
