@@ -50,9 +50,7 @@ public class B1414_불우이웃돕기 {
 		if(n == parent[n]) return n;
 		else return parent[n] = find(parent[n]); // 재귀함수의 형태로 구현 -> 경로 압축 부분
 	}
-
 }
-
 class Edge implements Comparable<Edge> {
 	int s, e, v;
 	Edge(int s, int e, int v) {
@@ -64,5 +62,4 @@ class Edge implements Comparable<Edge> {
 	public int compareTo(Edge e) {
 		return this.v - e.v;
 	}
-	
 }
