@@ -1,8 +1,8 @@
-package BasicMath1.Baek10250;
+package 기본수학1;
 
 import java.util.*;
 
-public class Main {
+public class B10250_ACM호텔 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
