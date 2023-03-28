@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-
 public class B1049_기타줄 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -25,8 +24,5 @@ public class B1049_기타줄 {
 		result = Math.min(((N / 6) + 1) * pack[0], N * unit[0]);
 		result = Math.min((N/6) * pack[0] + (N%6) * unit[0], result);
 		System.out.println(result);
-
 	}
-	
 }
-
